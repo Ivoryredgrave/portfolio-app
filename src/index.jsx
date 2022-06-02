@@ -22,7 +22,7 @@ root.render(
     <ThemeProvider theme={darkTheme}>
       
       <CssBaseline />
-
+      
       <ResponsiveAppBar />
       <AboutMe />
       <Education />
