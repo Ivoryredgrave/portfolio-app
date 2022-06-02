@@ -1,0 +1,29 @@
+.aboutme {
+    background: linear-gradient(45deg, #37505c 40%, #613d3d 90%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+@for $i from 1 through 30 {
+  @keyframes particle-animation-#{$i} {
+    100% {
+      transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+    }
+  }
+  
+  .particle:nth-child(#{$i}){
+    animation: particle-animation-#{$i} 60s infinite;
+    $size: random(4) + 4 + px;
+    opacity: random(100)/100;
+    height: $size;
+    width: $size;
+    animation-delay: -$i * .2s;
+    transform: translate3d((random(90) * 1vw), (random(90) * 1vh), (random(100) * 1px));
+    background: white
+  }
+}
