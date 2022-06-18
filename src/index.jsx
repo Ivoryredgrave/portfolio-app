@@ -13,7 +13,7 @@ import Footer from './pages/Footer';
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme } from './styles/components/darkTheme';
 import CssBaseline from '@mui/material/CssBaseline';
-import './styles/styles.scss';
+import './styles/styles.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

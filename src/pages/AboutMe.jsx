@@ -5,93 +5,50 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-
-import perfillogo from '../multimedia/images/perfil-logo.png';
+import perfillogo from '../multimedia/images/perfil-logo.jpg';
 import cv from '../multimedia/pdf/cv.pdf';
 
 export default function AboutMe() {
   return (
     <div id='aboutme'>
+      <Box className='aboutme'
+        sx={{
+          bgcolor: 'background.paper',
+          pt: 12,
+          pb: 20,
+        }}>
+        <Container maxWidth="sm">
 
-      <div id='particle-container'>
+          <Grid item xs={6}>
 
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
-        <div className="particle"></div>
+            <img
+              className='avatar'
+              src={perfillogo}
+              alt="Carlos Javier"
+            />
 
-        <Box className='aboutme'
-          sx={{
-            bgcolor: 'background.paper',
-            pt: 30,
-            pb: 30,
-          }}>
+          </Grid>
 
-          <Container maxWidth="sm">
+          <Grid sx={{ pt: 4 }} item xs={6}>
+            <Typography variant="h4" align="center" color="text.secondary" paragraph>
+              ¡Hola! Me llamo Carlos Javier López, soy desarrollador web junior en ReactJS.
+            </Typography>
+          </Grid>
 
-            <Grid item xs={6}>
-              <Avatar
-                className='avatar'
-                alt="Carlos Javier"
-                src={perfillogo}
-                style={{
-                  display: 'block',
-                  margin: 'auto'
-                }}
-                sx={{ width: 312, height: 312 }}
-              />
-            </Grid>
+          <Stack
+            sx={{ pt: 1 }}
+            direction="row"
+            spacing={2}
+            justifyContent="center"
+          >
+            <Button href={cv}
+              target="_blank" rel="noopener noreferrer" variant="outlined">
+              Descargar CV
+            </Button>
+          </Stack>
 
-            <Grid sx={{ pt: 4 }} item xs={6}>
-              <Typography variant="h4" align="center" color="text.secondary" paragraph>
-                ¡Hola! Me llamo Carlos Javier López, soy desarrollador web junior en ReactJS.
-              </Typography>
-            </Grid>
-
-            <Stack
-              sx={{ pt: 4 }}
-              direction="row"
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button href={cv}
-                target="_blank" rel="noopener noreferrer" variant="outlined">
-                Descargar CV
-              </Button>
-            </Stack>
-
-          </Container>
-        </Box>
-
-      </div>
+        </Container>
+      </Box>
     </div>
   );
 }
