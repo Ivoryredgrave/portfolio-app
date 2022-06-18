@@ -18,11 +18,14 @@ import LinkIcon from '@mui/icons-material/Link';
 
 import crudapp from '../multimedia/images/crudapp.png';
 import menuUE4 from '../multimedia/videos/videoMenuUE4.mp4';
+import menuPreview from '../multimedia/images/menu_ue4.jpg';
+
 import portfolio from '../multimedia/images/portfolio-preview.jpg';
 
-import ivorybot from '../multimedia/images/ivorybot.png';
-import ivorybot2 from '../multimedia/images/ivorybot2.png';
-import ivorybot3 from '../multimedia/images/ivorybot3.png';
+import ivorybot from '../multimedia/images/ivorybot.jpg';
+import ivorybot2 from '../multimedia/images/ivorybot2.jpg';
+import ivorybot3 from '../multimedia/images/ivorybot3.jpg';
+import ivorybot4 from '../multimedia/images/ivorybot4.jpg';
 
 import Chip from '@mui/material/Chip';
 
@@ -35,6 +38,9 @@ const itemData = [
     },
     {
         img: ivorybot3,
+    },
+    {
+        img: ivorybot4
     }
 ];
 
@@ -240,8 +246,9 @@ export default function Projects() {
                             <br />
 
                             <video src={menuUE4}
+                                poster={menuPreview}
                                 width="640" height="480"
-                                controls loop muted
+                                controls loop
                             />
 
                             <Stack
@@ -301,7 +308,7 @@ export default function Projects() {
                                 Bot para Discord con comandos básicos.&nbsp;<Chip label="Discord.js v12" color="primary" variant="outlined" />
                             </Typography>
 
-                            <ImageList sx={{ width: 612, height: 612 }} cols={1}>
+                            <ImageList sx={{ width: 512, height: 512 }} cols={1}>
                                 {itemData.map((item) => (
                                     <ImageListItem key={item.img}>
                                         <img
