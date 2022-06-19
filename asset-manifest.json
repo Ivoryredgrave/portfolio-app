@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio-app/static/css/main.0c09b539.css",
-    "main.js": "/portfolio-app/static/js/main.9bbd820d.js",
+    "main.css": "/portfolio-app/static/css/main.b13df8ce.css",
+    "main.js": "/portfolio-app/static/js/main.de059546.js",
     "static/media/videoMenuUE4.mp4": "/portfolio-app/static/media/videoMenuUE4.71a5589d8590e99f600c.mp4",
-    "static/media/titulo_unphu.jpg": "/portfolio-app/static/media/titulo_unphu.86479d0638d0c175bc5c.jpg",
+    "static/media/titulo_unphu.jpg": "/portfolio-app/static/media/titulo_unphu.dc5ae743c20a2e3938af.jpg",
     "static/media/perfil-logo.jpg": "/portfolio-app/static/media/perfil-logo.8e73470f0f0a6348892e.jpg",
     "static/media/cv.pdf": "/portfolio-app/static/media/cv.b2eb218b6b1aee8347cf.pdf",
     "static/media/portfolio-preview.jpg": "/portfolio-app/static/media/portfolio-preview.09a764d13eab370c9b0a.jpg",
@@ -19,11 +19,11 @@
     "static/media/html5-logo.png": "/portfolio-app/static/media/html5-logo.2e668c9515a31c45c2f3.png",
     "static/media/mysql-logo.png": "/portfolio-app/static/media/mysql-logo.b47c99c1f916a2f62c02.png",
     "index.html": "/portfolio-app/index.html",
-    "main.0c09b539.css.map": "/portfolio-app/static/css/main.0c09b539.css.map",
-    "main.9bbd820d.js.map": "/portfolio-app/static/js/main.9bbd820d.js.map"
+    "main.b13df8ce.css.map": "/portfolio-app/static/css/main.b13df8ce.css.map",
+    "main.de059546.js.map": "/portfolio-app/static/js/main.de059546.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c09b539.css",
-    "static/js/main.9bbd820d.js"
+    "static/css/main.b13df8ce.css",
+    "static/js/main.de059546.js"
   ]
 }
