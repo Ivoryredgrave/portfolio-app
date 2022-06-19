@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import perfillogo from '../multimedia/images/perfil-logo.jpg';
 import cv from '../multimedia/pdf/cv.pdf';
+import Avatar from '@mui/material/Avatar';
 
 export default function AboutMe() {
   return (
@@ -14,18 +15,25 @@ export default function AboutMe() {
       <Box className='aboutme'
         sx={{
           bgcolor: 'background.paper',
-          pt: 12,
-          pb: 20,
+          pt: 18,
+          pb: 18,
         }}>
         <Container maxWidth="sm">
 
           <Grid item xs={6}>
 
-            <img
-              className='avatar'
-              src={perfillogo}
-              alt="Carlos Javier"
-            />
+            <Stack direction="row" spacing={2}>
+              <Avatar
+                style={{
+                  display: "block",
+                  margin: "auto",
+                  boxShadow: "0px 6px 5px rgba(0, 0, 0, 0.527)"
+                }}
+                alt="Carlos Javier"
+                src={perfillogo}
+                sx={{ width: 324, height: 414 }}
+              />
+            </Stack>
 
           </Grid>
 
