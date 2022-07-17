@@ -1,276 +1,265 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import { styled } from '@mui/material/styles';
-import Rating from '@mui/material/Rating';
-import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
-import html5logo from '../multimedia/images/html5-logo.png';
-import css3logo from '../multimedia/images/css3-logo.png';
-import mysqllogo from '../multimedia/images/mysql-logo.png';
-import nodejslogo from '../multimedia/images/nodejs-logo.png';
-import reactjslogo from '../multimedia/images/reactjs-logo.png';
-import ue4logo from '../multimedia/images/ue4-logo.png';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
+import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
+import html5logo from "../multimedia/images/html5-logo.png";
+import css3logo from "../multimedia/images/css3-logo.png";
+import mysqllogo from "../multimedia/images/mysql-logo.png";
+import nodejslogo from "../multimedia/images/nodejs-logo.png";
+import reactjslogo from "../multimedia/images/reactjs-logo.png";
+import ue4logo from "../multimedia/images/ue4-logo.png";
 
 const StyledRating = styled(Rating)({
-    '& .MuiRating-iconFilled': {
-        color: '#ff6d75',
-    },
-    '& .MuiRating-iconHover': {
-        color: '#ff3d47',
-    },
+  "& .MuiRating-iconFilled": {
+    color: "#ff6d75",
+  },
+  "& .MuiRating-iconHover": {
+    color: "#ff3d47",
+  },
 });
 
 export default function Skills() {
-    return (
-        <div id='skills'>
+  return (
+    <div id="skills">
+      <Container maxWidth="md">
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
+        >
+          Habilidades
+        </Typography>
 
-            <Container maxWidth="md">
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  // 16:9
+                  pt: "16.25%",
+                }}
+                image={html5logo}
+                alt="random"
+              />
 
-                <Typography
-                    component="h1"
-                    variant="h2"
-                    align="center"
-                    color="text.primary"
-                    gutterBottom
-                >
-                    Habilidades
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  HTML5
                 </Typography>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <StyledRating
+                    name="customized-color"
+                    defaultValue={4}
+                    readOnly
+                    precision={0.5}
+                    icon={<CircleRoundedIcon fontSize="inherit" />}
+                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
+                  />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
 
-                <Grid container spacing={4}>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  // 16:9
+                  pt: "16.25%",
+                }}
+                image={css3logo}
+                alt="random"
+              />
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card
-                            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    // 16:9
-                                    pt: '16.25%',
-                                }}
-                                image={html5logo}
-                                alt="random"
-                            />
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  CSS3
+                </Typography>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <StyledRating
+                    name="customized-color"
+                    defaultValue={2}
+                    readOnly
+                    precision={0.5}
+                    icon={<CircleRoundedIcon fontSize="inherit" />}
+                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
+                  />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
 
-                            <CardContent sx={{ flexGrow: 1 }}>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    HTML5
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                    <StyledRating
-                                        name="customized-color"
-                                        defaultValue={4}
-                                        readOnly
-                                        precision={0.5}
-                                        icon={<CircleRoundedIcon fontSize="inherit" />}
-                                        emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                                    />
-                                </Box>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  // 16:9
+                  pt: "16.25%",
+                }}
+                image={reactjslogo}
+                alt="random"
+              />
 
-                            </CardContent>
-                        </Card>
-                    </Grid>
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  ReactJS
+                </Typography>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <StyledRating
+                    name="customized-color"
+                    defaultValue={2}
+                    readOnly
+                    precision={0.5}
+                    icon={<CircleRoundedIcon fontSize="inherit" />}
+                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
+                  />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card
-                            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    // 16:9
-                                    pt: '16.25%',
-                                }}
-                                image={css3logo}
-                                alt="random"
-                            />
+          <Grid item xs={12} sm={6} md={4}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  // 16:9
+                  pt: "16.25%",
+                }}
+                image={nodejslogo}
+                alt="random"
+              />
 
-                            <CardContent sx={{ flexGrow: 1 }}>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    CSS3
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                    <StyledRating
-                                        name="customized-color"
-                                        defaultValue={2}
-                                        readOnly
-                                        precision={0.5}
-                                        icon={<CircleRoundedIcon fontSize="inherit" />}
-                                        emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                                    />
-                                </Box>
-                            </CardContent>
-                        </Card>
-                    </Grid>
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  NodeJS
+                </Typography>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <StyledRating
+                    name="customized-color"
+                    defaultValue={2}
+                    readOnly
+                    precision={0.5}
+                    icon={<CircleRoundedIcon fontSize="inherit" />}
+                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
+                  />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card
-                            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    // 16:9
-                                    pt: '16.25%',
-                                }}
-                                image={reactjslogo}
-                                alt="random"
-                            />
+          <Grid item xs={12} sm={6} md={4}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  // 16:9
+                  pt: "16.25%",
+                }}
+                image={mysqllogo}
+                alt="random"
+              />
 
-                            <CardContent sx={{ flexGrow: 1 }}>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    ReactJS
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                    <StyledRating
-                                        name="customized-color"
-                                        defaultValue={3}
-                                        readOnly
-                                        precision={0.5}
-                                        icon={<CircleRoundedIcon fontSize="inherit" />}
-                                        emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                                    />
-                                </Box>
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  MySQL
+                </Typography>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <StyledRating
+                    name="customized-color"
+                    defaultValue={3}
+                    readOnly
+                    precision={0.5}
+                    icon={<CircleRoundedIcon fontSize="inherit" />}
+                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
+                  />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
 
-                            </CardContent>
-                        </Card>
-                    </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card
+              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <CardMedia
+                component="img"
+                sx={{
+                  // 16:9
+                  pt: "16.25%",
+                }}
+                image={ue4logo}
+                alt="random"
+              />
 
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card
-                            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    // 16:9
-                                    pt: '16.25%',
-                                }}
-                                image={nodejslogo}
-                                alt="random"
-                            />
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Unreal Engine 4 Blueprints
+                </Typography>
+                <Box
+                  sx={{
+                    "& > legend": { mt: 2 },
+                  }}
+                >
+                  <StyledRating
+                    name="customized-color"
+                    defaultValue={3}
+                    readOnly
+                    precision={0.5}
+                    icon={<CircleRoundedIcon fontSize="inherit" />}
+                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
+                  />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
 
-                            <CardContent sx={{ flexGrow: 1 }}>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    NodeJS
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                    <StyledRating
-                                        name="customized-color"
-                                        defaultValue={2}
-                                        readOnly
-                                        precision={0.5}
-                                        icon={<CircleRoundedIcon fontSize="inherit" />}
-                                        emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                                    />
-                                </Box>
-
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card
-                            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    // 16:9
-                                    pt: '16.25%',
-                                }}
-                                image={mysqllogo}
-                                alt="random"
-                            />
-
-                            <CardContent sx={{ flexGrow: 1 }}>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    MySQL
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                    <StyledRating
-                                        name="customized-color"
-                                        defaultValue={3}
-                                        readOnly
-                                        precision={0.5}
-                                        icon={<CircleRoundedIcon fontSize="inherit" />}
-                                        emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                                    />
-                                </Box>
-
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card
-                            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                        >
-                            <CardMedia
-                                component="img"
-                                sx={{
-                                    // 16:9
-                                    pt: '16.25%',
-                                }}
-                                image={ue4logo}
-                                alt="random"
-                            />
-
-                            <CardContent sx={{ flexGrow: 1 }}>
-                                <Typography gutterBottom variant="h5" component="h2">
-                                    Unreal Engine 4
-                                    Blueprints
-                                </Typography>
-                                <Box
-                                    sx={{
-                                        '& > legend': { mt: 2 },
-                                    }}
-                                >
-                                    <StyledRating
-                                        name="customized-color"
-                                        defaultValue={3}
-                                        readOnly
-                                        precision={0.5}
-                                        icon={<CircleRoundedIcon fontSize="inherit" />}
-                                        emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                                    />
-                                </Box>
-
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                </Grid>
-            </Container>
-
-            <br />
-
-        </div>
-    );
+      <br />
+    </div>
+  );
 }
