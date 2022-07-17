@@ -1,13 +1,18 @@
+// react
 import * as React from "react";
+
+// material ui
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+
+// multimedia
 import perfillogo from "../multimedia/images/perfil-logo.jpg";
 import cv from "../multimedia/pdf/cv.pdf";
-import Avatar from "@mui/material/Avatar";
 
 export default function AboutMe() {
   return (
@@ -60,7 +65,7 @@ export default function AboutMe() {
               rel="noopener noreferrer"
               variant="outlined"
             >
-              Descargar CV
+              Ver hoja de vida
             </Button>
           </Stack>
         </Container>

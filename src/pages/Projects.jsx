@@ -1,6 +1,7 @@
+// react
 import * as React from "react";
-import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
+
+// material ui
 import { useTheme } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
@@ -14,23 +15,24 @@ import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Stack from "@mui/material/Stack";
 import LinkIcon from "@mui/icons-material/Link";
+import Chip from "@mui/material/Chip";
 
+// other modules
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+
+// multimedia
 import menuUE4 from "../multimedia/videos/videoMenuUE4.mp4";
 import menuPreview from "../multimedia/images/menu_ue4.jpg";
-
 import portfolio from "../multimedia/images/portfolio-preview.jpg";
-
 import ivorybot from "../multimedia/images/ivorybot.jpg";
 import ivorybot2 from "../multimedia/images/ivorybot2.jpg";
 import ivorybot3 from "../multimedia/images/ivorybot3.jpg";
 import ivorybot4 from "../multimedia/images/ivorybot4.jpg";
-
 import crudapp from "../multimedia/images/crudapp.png";
 import crudapp2 from "../multimedia/images/crudapp2.png";
 import crudapp3 from "../multimedia/images/crudapp3.png";
 import crudapp4 from "../multimedia/images/crudapp4.png";
-
-import Chip from "@mui/material/Chip";
 
 const itemData = [
   {
@@ -128,7 +130,7 @@ export default function Projects() {
 
   return (
     <div id="projects">
-      <Container sx={{ py: 5 }} maxWidth="md">
+      <Container sx={{ py: 4 }} maxWidth="md">
         <Typography
           component="h1"
           variant="h2"

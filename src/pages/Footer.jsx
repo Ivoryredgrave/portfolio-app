@@ -1,4 +1,7 @@
+// react
 import * as React from "react";
+
+// material ui
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -35,7 +38,7 @@ export default function Footer() {
         justifyContent="center"
         component="footer"
       >
-        <Container sx={{ py: 5 }} maxWidth="md">
+        <Container sx={{ py: 4 }} maxWidth="md">
           <Typography
             component="h1"
             variant="h2"

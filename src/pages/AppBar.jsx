@@ -1,4 +1,7 @@
+// react
 import * as React from "react";
+
+// material ui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -77,9 +80,15 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            Ivoryredgrave
+            Carlos Javier López
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+
+          <Box
+            style={{
+              justifyContent: "center",
+            }}
+            sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
+          >
             <Button href="#aboutme">Acerca de mi</Button>
             <Button href="#education">Educación</Button>
             <Button href="#skills">Habilidades</Button>

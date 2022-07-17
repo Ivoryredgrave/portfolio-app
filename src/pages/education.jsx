@@ -1,4 +1,6 @@
+// react
 import * as React from "react";
+// material ui
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import List from "@mui/material/List";
@@ -7,13 +9,11 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import SchoolIcon from "@mui/icons-material/School";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import titulo_unphu from "../multimedia/images/titulo_unphu.jpg";
 
 export default function Education() {
   return (
     <div id="education">
-      <Container sx={{ py: 5 }} maxWidth="md">
+      <Container sx={{ py: 4 }} maxWidth="md">
         <Typography
           component="h1"
           variant="h2"
@@ -40,7 +40,7 @@ export default function Education() {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="Politécnico Don Pepe Álvarez - La Vega"
+              primary="Politécnico Don Pepe Álvarez"
               secondary="Bachiller | 2013 - 2016"
             />
           </ListItem>
@@ -62,17 +62,8 @@ export default function Education() {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="UNPHU - (Recinto La Vega)"
-              secondary={
-                <Link
-                  href={titulo_unphu}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  underline="hover"
-                >
-                  Lic. en Informática | Sept. 2016 - Abr. 2022
-                </Link>
-              }
+              primary="Universidad Nacional Pedro Henríquez Ureña"
+              secondary="Lic. en Informática | Sept. 2016 - Abr. 2022"
             />
           </ListItem>
         </List>

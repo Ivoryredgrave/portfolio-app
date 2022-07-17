@@ -1,4 +1,4 @@
-// react modules
+// react
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -12,7 +12,7 @@ import Footer from "./pages/Footer";
 
 // styles
 import { ThemeProvider } from "@mui/material/styles";
-import { darkTheme } from "./styles/components/darkTheme";
+import { darkTheme } from "./styles/components/muiStyles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./styles/styles.css";
 
@@ -21,6 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={darkTheme}>
+
       <CssBaseline />
 
       <ResponsiveAppBar />
@@ -29,6 +30,7 @@ root.render(
       <Skills />
       <Projects />
       <Footer />
+
     </ThemeProvider>
   </React.StrictMode>
 );
