@@ -1,27 +1,24 @@
 // react
-import * as React from "react";
-
-// material ui
-import { useTheme } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import * as React from 'react';
+import Typography from '@mui/material/Typography';
 import Container from "@mui/material/Container";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 import LinkIcon from "@mui/icons-material/Link";
-import Chip from "@mui/material/Chip";
-
-// other modules
-import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 // multimedia
+import crudapp from "../multimedia/images/crudapp.png";
+import crudapp2 from "../multimedia/images/crudapp2.png";
+import crudapp3 from "../multimedia/images/crudapp3.png";
+import crudapp4 from "../multimedia/images/crudapp4.png";
 import menuUE4 from "../multimedia/videos/videoMenuUE4.mp4";
 import menuPreview from "../multimedia/images/menu_ue4.jpg";
 import portfolio from "../multimedia/images/portfolio-preview.jpg";
@@ -29,85 +26,52 @@ import ivorybot from "../multimedia/images/ivorybot.jpg";
 import ivorybot2 from "../multimedia/images/ivorybot2.jpg";
 import ivorybot3 from "../multimedia/images/ivorybot3.jpg";
 import ivorybot4 from "../multimedia/images/ivorybot4.jpg";
-import crudapp from "../multimedia/images/crudapp.png";
-import crudapp2 from "../multimedia/images/crudapp2.png";
-import crudapp3 from "../multimedia/images/crudapp3.png";
-import crudapp4 from "../multimedia/images/crudapp4.png";
-
-const itemData = [
-  {
-    img: ivorybot,
-  },
-  {
-    img: ivorybot2,
-  },
-  {
-    img: ivorybot3,
-  },
-  {
-    img: ivorybot4,
-  },
-];
-
-const dataItem = [
-  {
-    img: crudapp,
-  },
-  {
-    img: crudapp2,
-  },
-  {
-    img: crudapp3,
-  },
-  {
-    img: crudapp4,
-  },
-];
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`full-width-tabpanel-${index}`}
-      aria-labelledby={`full-width-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `full-width-tab-${index}`,
-    "aria-controls": `full-width-tabpanel-${index}`,
-  };
-}
+import testiahri from "../multimedia/images/testi-ahri.jpg";
+import testijinx from "../multimedia/images/testi-jinx.jpg";
 
 export default function Projects() {
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  const dataItem = [
+    {
+      img: crudapp,
+    },
+    {
+      img: crudapp2,
+    },
+    {
+      img: crudapp3,
+    },
+    {
+      img: crudapp4,
+    },
+  ];
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  const itemData = [
+    {
+      img: ivorybot,
+    },
+    {
+      img: ivorybot2,
+    },
+    {
+      img: ivorybot3,
+    },
+    {
+      img: ivorybot4,
+    },
+  ];
+
+  const imgTestiApp = [
+    {
+      img: testijinx,
+    },
+    {
+      img: testiahri,
+    },
+
+  ];
+
+  const [expanded, setExpanded] = React.useState('panel1');
 
   const buttons = [
     <Button
@@ -116,7 +80,7 @@ export default function Projects() {
       rel="noopener noreferrer"
     >
       <LinkIcon />
-      &nbsp;Frontend
+      &nbsp;Código fuente Frontend
     </Button>,
     <Button
       href="https://github.com/Ivoryredgrave/crudAPP-Backend"
@@ -124,9 +88,13 @@ export default function Projects() {
       rel="noopener noreferrer"
     >
       <LinkIcon />
-      &nbsp;Backend
+      &nbsp;Código fuente Backend
     </Button>,
   ];
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <div id="projects">
@@ -141,235 +109,301 @@ export default function Projects() {
           Proyectos
         </Typography>
 
-        <Box
-          style={{
-            display: "block",
-            margin: "auto",
-          }}
-        >
-          <AppBar position="static">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              indicatorColor="secondary"
-              textColor="inherit"
-              variant="fullWidth"
-              aria-label="full width tabs example"
-            >
-              <Tab label="crudAPP" {...a11yProps(0)} />
-              <Tab label="Menu Template" {...a11yProps(1)} />
-              <Tab label="Portfolio APP" {...a11yProps(2)} />
-              <Tab label="Ivorybot" {...a11yProps(3)} />
-            </Tabs>
-          </AppBar>
-          <SwipeableViews
-            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-            index={value}
-            onChangeIndex={handleChangeIndex}
+        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1bh-content"
+            id="panel1bh-header"
           >
-            <TabPanel value={value} index={0} dir={theme.direction}>
-              <Typography variant="body1" gutterBottom>
-                Plantilla responsiva en base a las funciones de un CRUD.
-              </Typography>
+            <Typography sx={{ width: '33%', flexShrink: 0 }}>
+              Crud-app
+            </Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              Plantilla responsiva en base a las funciones de un CRUD.
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="Ant Design" color="info" variant="outlined" />
+            <Chip label="NodeJS" color="success" variant="outlined" />
+            <Chip label="MySQL" color="warning" variant="outlined" />
+            <br />
+            <br />
+            <Typography variant="body1" gutterBottom>
+              ☑️ Ventana de iniciar sesión.
+            </Typography>
 
-              <Chip label="ReactJS" color="primary" variant="outlined" />
-              <Chip label="Ant Design" color="info" variant="outlined" />
-              <Chip label="NodeJS" color="success" variant="outlined" />
-              <Chip label="MySQL" color="warning" variant="outlined" />
+            <Typography variant="body1" gutterBottom>
+              ☑️ Roles de usuario.
+            </Typography>
 
-              <br />
-              <br />
+            <Typography variant="body1" gutterBottom>
+              ☑️ Menú lateral.
+            </Typography>
 
-              <Typography variant="body1" gutterBottom>
-                ☑️ Ventana de iniciar sesión.
-              </Typography>
+            <Typography variant="body1" gutterBottom>
+              ☑️ Resúmenes estadísticos de usuarios.
+            </Typography>
 
-              <Typography variant="body1" gutterBottom>
-                ☑️ Roles de usuario.
-              </Typography>
+            <Typography variant="body1" gutterBottom>
+              ☑️ Añadir y modificar usuarios.
+            </Typography>
 
-              <Typography variant="body1" gutterBottom>
-                ☑️ Menú lateral.
-              </Typography>
+            <Typography variant="body1" gutterBottom>
+              ☑️ Emisión de reportes en formato PDF, CSV y XLSX.
+            </Typography>
+            <br />
+            <ImageList sx={{ height: 512 }} cols={1}>
+              {dataItem.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}`}
+                    srcSet={`${item.img}`}
+                    alt={"crudapp"}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
+              <ButtonGroup
+                color="primary"
+                aria-label="medium secondary button group"
+              >
+                {buttons}
+              </ButtonGroup>
+            </Stack>
+          </AccordionDetails>
+        </Accordion>
 
-              <Typography variant="body1" gutterBottom>
-                ☑️ Resúmenes estadísticos de usuarios.
-              </Typography>
+        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel2bh-content"
+            id="panel2bh-header"
+          >
+            <Typography sx={{ width: '33%', flexShrink: 0 }}>Menu-template</Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              Menú responsivo.
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Chip
+              label="Unreal Engine 4.27.2"
+              color="default"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <Typography variant="body1" gutterBottom>
+              ☑️ Menú de pausa al presionar la tecla ESC.
+            </Typography>
 
-              <Typography variant="body1" gutterBottom>
-                ☑️ Añadir y modificar usuarios.
-              </Typography>
+            <Typography variant="body1" gutterBottom>
+              ☑️ Ventana de carga (loading...).
+            </Typography>
 
-              <Typography variant="body1" gutterBottom>
-                ☑️ Emisión de reportes en formato PDF, CSV y XLSX.
-              </Typography>
+            <Typography variant="body1" gutterBottom>
+              ☑️ Ventana de créditos.
+            </Typography>
 
-              <br />
+            <Typography variant="body1" gutterBottom>
+              ☑️ Pantalla completa y modo ventana.
+            </Typography>
 
-              <ImageList sx={{ width: 612, height: 612 }} cols={1}>
-                {dataItem.map((item) => (
-                  <ImageListItem key={item.img}>
-                    <img
-                      src={`${item.img}`}
-                      srcSet={`${item.img}`}
-                      alt={"crudapp"}
-                      loading="lazy"
-                    />
-                  </ImageListItem>
-                ))}
-              </ImageList>
+            <Typography variant="body1" gutterBottom>
+              ☑️ Controlar volumen de música y efectos.
+            </Typography>
 
-              <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-                <ButtonGroup
-                  color="primary"
-                  aria-label="medium secondary button group"
-                >
-                  {buttons}
-                </ButtonGroup>
-              </Stack>
-            </TabPanel>
-
-            <TabPanel value={value} index={1} dir={theme.direction}>
-              <Typography variant="body1" gutterBottom>
-                Menú responsivo.&nbsp;
-                <Chip
-                  label="Unreal Engine 4.27.2"
-                  color="default"
-                  variant="outlined"
+            <Typography variant="body1" gutterBottom>
+              ☑️ Guardado automático de la ventana de ajustes.
+            </Typography>
+            <br />
+            <ImageList>
+              <ImageListItem>
+                <video
+                  src={menuUE4}
+                  poster={menuPreview}
+                  width="640"
+                  height="480"
+                  controls
+                  loop
                 />
-              </Typography>
-
-              <br />
-
-              <Typography variant="body1" gutterBottom>
-                ☑️ Menú de pausa al presionar la tecla ESC.
-              </Typography>
-
-              <Typography variant="body1" gutterBottom>
-                ☑️ Ventana de carga (loading...).
-              </Typography>
-
-              <Typography variant="body1" gutterBottom>
-                ☑️ Ventana de créditos.
-              </Typography>
-
-              <Typography variant="body1" gutterBottom>
-                ☑️ Pantalla completa y modo ventana.
-              </Typography>
-
-              <Typography variant="body1" gutterBottom>
-                ☑️ Controlar volumen de música y efectos.
-              </Typography>
-
-              <Typography variant="body1" gutterBottom>
-                ☑️ Guardado automático de la ventana de ajustes.
-              </Typography>
-
-              <br />
-
-              <video
-                src={menuUE4}
-                poster={menuPreview}
-                width="640"
-                height="480"
-                controls
-                loop
-              />
-
-              <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-                <ButtonGroup
-                  color="primary"
-                  aria-label="medium secondary button group"
-                >
-                  <Button
-                    href="https://github.com/Ivoryredgrave/PlantillaMenuUE4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LinkIcon />
-                    &nbsp;Menu Template
-                  </Button>
-                </ButtonGroup>
-              </Stack>
-            </TabPanel>
-
-            <TabPanel value={value} index={2} dir={theme.direction}>
-              <Typography variant="body1" gutterBottom>
-                Portafolio personal.&nbsp;
-                <Chip label="ReactJS" color="primary" variant="outlined" />
-                <Chip label="MUI" color="info" variant="outlined" />
-                <Chip label="SCSS" color="secondary" variant="outlined" />
-              </Typography>
-
-              <br />
-
-              <img
-                src={portfolio}
-                srcSet={portfolio}
-                alt={"portfolio"}
-                loading="lazy"
-                style={{
-                  height: "650px",
-                  width: "650px",
-                }}
-              />
-
-              <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-                <ButtonGroup
-                  color="primary"
-                  aria-label="medium secondary button group"
-                >
-                  <Button
-                    href="https://github.com/Ivoryredgrave/portfolio-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <LinkIcon />
-                    &nbsp;Portfolio APP
-                  </Button>
-                </ButtonGroup>
-              </Stack>
-            </TabPanel>
-
-            <TabPanel value={value} index={3} dir={theme.direction}>
-              <Typography variant="body1" gutterBottom>
-                Bot para Discord con comandos básicos.&nbsp;
-                <Chip
-                  label="Discord.js v12"
-                  color="primary"
-                  variant="outlined"
-                />
-              </Typography>
-
-              <ImageList sx={{ width: 512, height: 512 }} cols={1}>
-                {itemData.map((item) => (
-                  <ImageListItem key={item.img}>
-                    <img
-                      src={`${item.img}`}
-                      srcSet={`${item.img}`}
-                      alt={"ivorybot"}
-                      loading="lazy"
-                    />
-                  </ImageListItem>
-                ))}
-              </ImageList>
-
+              </ImageListItem>
+            </ImageList>
+            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
               <ButtonGroup
                 color="primary"
                 aria-label="medium secondary button group"
               >
                 <Button
-                  href="https://github.com/Ivoryredgrave/ivorybot"
+                  href="https://github.com/Ivoryredgrave/PlantillaMenuUE4"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <LinkIcon />
-                  &nbsp;Ivorybot
+                  &nbsp;Código fuente
                 </Button>
               </ButtonGroup>
-            </TabPanel>
-          </SwipeableViews>
-        </Box>
+            </Stack>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel3bh-content"
+            id="panel3bh-header"
+          >
+            <Typography sx={{ width: '33%', flexShrink: 0 }}>
+              Portfolio-app
+            </Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              Portafolio personal.
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="MUI" color="info" variant="outlined" />
+            <Chip label="CSS" color="secondary" variant="outlined" />
+            <br />
+            <br />
+            <ImageList sx={{ height: 512 }} cols={1}>
+              <ImageListItem>
+                <img
+                  src={portfolio}
+                  srcSet={portfolio}
+                  alt={"portfolio"}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            </ImageList>
+            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
+              <ButtonGroup
+                color="primary"
+                aria-label="medium secondary button group"
+              >
+                <Button
+                  href="https://github.com/Ivoryredgrave/portfolio-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkIcon />
+                  &nbsp;Código fuente
+                </Button>
+                <Button
+                href="https://ivoryredgrave.github.io/portfolio-app/"
+                target="_blank"
+                color="success"
+                rel="noopener noreferrer">
+                <LinkIcon />
+                &nbsp;Demo
+              </Button>
+              </ButtonGroup>
+            </Stack>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel4bh-content"
+            id="panel4bh-header"
+          >
+            <Typography sx={{ width: '33%', flexShrink: 0 }}>Ivory-bot</Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              Bot para discord con comandos básicos.
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+
+            <Chip
+              label="Discord.js v12"
+              color="primary"
+              variant="outlined"
+            />
+            <br />
+            <br />
+            <ImageList sx={{ height: 512 }} cols={1}>
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}`}
+                    srcSet={`${item.img}`}
+                    alt={"ivorybot"}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+
+            <ButtonGroup
+              color="primary"
+              aria-label="medium secondary button group"
+            >
+              <Button
+                href="https://github.com/Ivoryredgrave/ivorybot"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkIcon />
+                &nbsp;Código fuente
+              </Button>
+            </ButtonGroup>
+          </AccordionDetails>
+        </Accordion>
+
+        <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel4bh-content"
+            id="panel4bh-header"
+          >
+            <Typography sx={{ width: '33%', flexShrink: 0 }}>Testi-app</Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              Testimonio de clientes.
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="MUI" color="info" variant="outlined" />
+            <Chip label="CSS" color="secondary" variant="outlined" />
+            <br />
+            <br />
+            <ImageList sx={{ height: 512 }} cols={1}>
+              {imgTestiApp.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}`}
+                    srcSet={`${item.img}`}
+                    alt={"testiapp"}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+            <ButtonGroup
+              color="primary"
+              aria-label="medium secondary button group">
+              <Button
+                href="https://github.com/Ivoryredgrave/testiAPP"
+                target="_blank"
+                rel="noopener noreferrer">
+                <LinkIcon />
+                &nbsp;Código fuente
+              </Button>
+              <Button
+                href="https://ivoryredgrave.github.io/testiAPP/"
+                target="_blank"
+                color="success"
+                rel="noopener noreferrer">
+                <LinkIcon />
+                &nbsp;Demo
+              </Button>
+            </ButtonGroup>
+          </AccordionDetails>
+        </Accordion>
       </Container>
     </div>
   );

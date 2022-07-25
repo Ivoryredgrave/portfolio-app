@@ -5,9 +5,9 @@ import ReactDOM from "react-dom/client";
 // pages
 import ResponsiveAppBar from "./pages/AppBar";
 import AboutMe from "./pages/AboutMe";
-import Skills from "./pages/skills";
+import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
-import Education from "./pages/education";
+import Education from "./pages/Education";
 import Footer from "./pages/Footer";
 
 // styles
