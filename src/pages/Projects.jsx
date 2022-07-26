@@ -244,6 +244,17 @@ export default function Projects() {
                   <LinkIcon />
                   &nbsp;Código fuente
                 </Button>
+
+                <Button
+                  href="https://ivoryredgrave.itch.io/menu-template-ue4"
+                  target="_blank"
+                  color="success"
+                  rel="noopener noreferrer"
+                >
+                  <LinkIcon />
+                  &nbsp;Demo
+                </Button>
+
               </ButtonGroup>
             </Stack>
           </AccordionDetails>
@@ -292,13 +303,13 @@ export default function Projects() {
                   &nbsp;Código fuente
                 </Button>
                 <Button
-                href="https://ivoryredgrave.github.io/portfolio-app/"
-                target="_blank"
-                color="success"
-                rel="noopener noreferrer">
-                <LinkIcon />
-                &nbsp;Demo
-              </Button>
+                  href="https://ivoryredgrave.github.io/portfolio-app/"
+                  target="_blank"
+                  color="success"
+                  rel="noopener noreferrer">
+                  <LinkIcon />
+                  &nbsp;Demo
+                </Button>
               </ButtonGroup>
             </Stack>
           </AccordionDetails>
@@ -349,7 +360,19 @@ export default function Projects() {
                 <LinkIcon />
                 &nbsp;Código fuente
               </Button>
+
+              <Button
+                href="https://discord.com/api/oauth2/authorize?client_id=979134814273826816&permissions=8&scope=bot"
+                target="_blank"
+                color="success"
+                rel="noopener noreferrer"
+              >
+                <LinkIcon />
+                &nbsp;Demo
+              </Button>
+
             </ButtonGroup>
+
           </AccordionDetails>
         </Accordion>
 
