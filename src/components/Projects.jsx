@@ -1,4 +1,3 @@
-// react
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Container from "@mui/material/Container";
@@ -13,8 +12,6 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-// multimedia
 import crudapp from "../multimedia/images/crudapp.png";
 import crudapp2 from "../multimedia/images/crudapp2.png";
 import crudapp3 from "../multimedia/images/crudapp3.png";

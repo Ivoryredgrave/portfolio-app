@@ -1,7 +1,4 @@
-// react
 import * as React from "react";
-
-// material ui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -58,19 +55,19 @@ const ResponsiveAppBar = () => {
               }}
             >
               <Button onClick={handleCloseNavMenu} href="#aboutme">
-                Acerca de mi
+                {props.tituloSobreMi}
               </Button>
               <Button onClick={handleCloseNavMenu} href="#education">
-                Educación
+                {props.tituloEducacion}
               </Button>
               <Button onClick={handleCloseNavMenu} href="#skills">
-                Habilidades
+                {props.tituloHabilidades}
               </Button>
               <Button onClick={handleCloseNavMenu} href="#projects">
-                Proyectos
+                {props.tituloProyectos}
               </Button>
               <Button onClick={handleCloseNavMenu} href="#contacts">
-                Contacto
+                {props.tituloContacto}
               </Button>
             </Menu>
           </Box>
@@ -80,20 +77,19 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            Carlos Javier López
+            {props.tituloNombre}
           </Typography>
-
           <Box
             style={{
               justifyContent: "center",
             }}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
-            <Button href="#aboutme">Acerca de mi</Button>
-            <Button href="#education">Educación</Button>
-            <Button href="#skills">Habilidades</Button>
-            <Button href="#projects">Proyectos</Button>
-            <Button href="#contacts">Contacto</Button>
+            <Button href="#aboutme">{props.tituloSobreMi}</Button>
+            <Button href="#education">{props.tituloEducacion}</Button>
+            <Button href="#skills">{props.tituloHabilidades}</Button>
+            <Button href="#projects"> {props.tituloProyectos}</Button>
+            <Button href="#contacts">{props.tituloContacto}</Button>
           </Box>
         </Toolbar>
       </Container>

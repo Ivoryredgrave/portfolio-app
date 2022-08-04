@@ -1,6 +1,4 @@
-// react
 import * as React from "react";
-// material ui
 import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import List from "@mui/material/List";
@@ -10,7 +8,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import SchoolIcon from "@mui/icons-material/School";
 import Container from "@mui/material/Container";
 
-export default function Education() {
+export default function Education(props) {
   return (
     <div id="education">
       <Container sx={{ py: 4 }} maxWidth="md">
@@ -21,7 +19,7 @@ export default function Education() {
           color="text.primary"
           gutterBottom
         >
-          Educación
+          {props.titulo}
         </Typography>
 
         <List
@@ -40,8 +38,8 @@ export default function Education() {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="Politécnico Don Pepe Álvarez"
-              secondary="Bachiller | 2013 - 2016"
+              primary={props.nombreSecundaria}
+              secondary={props.subtituloSecundaria}
             />
           </ListItem>
         </List>
@@ -62,8 +60,8 @@ export default function Education() {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="Universidad Nacional Pedro Henríquez Ureña"
-              secondary="Lic. en Informática | Sept. 2016 - Abr. 2022"
+              primary={props.nombreUniversidad}
+              secondary={props.subtituloUniversidad}
             />
           </ListItem>
         </List>

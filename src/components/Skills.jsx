@@ -1,7 +1,4 @@
-// react
 import * as React from "react";
-
-// material ui
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -11,16 +8,12 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
-
-// multimedia
 import html5logo from "../multimedia/images/html5-logo.png";
 import css3logo from "../multimedia/images/css3-logo.png";
 import mysqllogo from "../multimedia/images/mysql-logo.png";
 import nodejslogo from "../multimedia/images/nodejs-logo.png";
 import reactjslogo from "../multimedia/images/reactjs-logo.png";
 import ue4logo from "../multimedia/images/ue4-logo.png";
-
-// styles
 import { StyledRating } from "../styles/components/muiStyles";
 
 export default function Skills() {
@@ -38,6 +31,7 @@ export default function Skills() {
         </Typography>
 
         <Grid container spacing={4}>
+
           <Grid item xs={12} sm={6} md={4}>
             <Card
               sx={{ height: "100%", display: "flex", flexDirection: "column" }}
@@ -63,7 +57,7 @@ export default function Skills() {
                 >
                   <StyledRating
                     name="customized-color"
-                    defaultValue={4}
+                    defaultValue={2}
                     readOnly
                     precision={0.5}
                     icon={<CircleRoundedIcon fontSize="inherit" />}
@@ -207,7 +201,7 @@ export default function Skills() {
                 >
                   <StyledRating
                     name="customized-color"
-                    defaultValue={3}
+                    defaultValue={2}
                     readOnly
                     precision={0.5}
                     icon={<CircleRoundedIcon fontSize="inherit" />}
@@ -243,7 +237,7 @@ export default function Skills() {
                 >
                   <StyledRating
                     name="customized-color"
-                    defaultValue={2}
+                    defaultValue={3}
                     readOnly
                     precision={0.5}
                     icon={<CircleRoundedIcon fontSize="inherit" />}

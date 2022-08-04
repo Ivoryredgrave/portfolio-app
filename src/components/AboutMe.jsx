@@ -1,7 +1,4 @@
-// react
 import * as React from "react";
-
-// material ui
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
@@ -10,11 +7,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 
-// multimedia
-import perfillogo from "../multimedia/images/perfil-logo.jpg";
-import cv from "../multimedia/pdf/cv.pdf";
-
-export default function AboutMe() {
+export default function AboutMe(props) {
   return (
     <div id="aboutme">
       <Box
@@ -34,8 +27,8 @@ export default function AboutMe() {
                   margin: "auto",
                   boxShadow: "0px 6px 5px rgba(0, 0, 0, 0.527)",
                 }}
-                alt="Carlos Javier"
-                src={perfillogo}
+                alt={props.alt}
+                src={require(`../multimedia/images/${props.imagenPerfil}`)}
                 sx={{ width: 334, height: 414 }}
               />
             </Stack>
@@ -48,8 +41,7 @@ export default function AboutMe() {
               color="text.secondary"
               paragraph
             >
-              ¡Hola! Me llamo Carlos Javier López, soy desarrollador web junior
-              en ReactJS.
+              {props.descripcionPerfil}
             </Typography>
           </Grid>
 
@@ -60,12 +52,12 @@ export default function AboutMe() {
             justifyContent="center"
           >
             <Button
-              href={cv}
+              href={require(`../multimedia/pdf/${props.abrirCV}`)}
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"
             >
-              Ver hoja de vida
+              {props.descripcionBotonCV}
             </Button>
           </Stack>
         </Container>

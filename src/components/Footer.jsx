@@ -1,7 +1,4 @@
-// react
 import * as React from "react";
-
-// material ui
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -13,17 +10,17 @@ import Container from "@mui/material/Container";
 import MailIcon from "@mui/icons-material/Mail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-export default function Footer() {
+export default function Footer(props) {
   const buttons = [
     <Button
-      href="https://github.com/Ivoryredgrave"
+      href={props.urlGithub}
       target="_blank"
       rel="noopener noreferrer"
     >
       <GitHubIcon />
     </Button>,
     <Button
-      href="https://www.linkedin.com/in/carlos-javier-l%C3%B3pez/"
+      href={props.urlLinkedin}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -46,7 +43,7 @@ export default function Footer() {
             color="text.primary"
             gutterBottom
           >
-            Contacto
+            {props.titulo}
           </Typography>
 
           <Typography
@@ -55,8 +52,7 @@ export default function Footer() {
             color="text.secondary"
             paragraph
           >
-            Si tienes alguna pregunta o propuesta de trabajo, mi bandeja de
-            entrada esta disponible.
+            {props.descripcion}
           </Typography>
 
           <Stack
@@ -65,19 +61,19 @@ export default function Footer() {
             spacing={2}
             justifyContent="center"
           >
-            <Button href="mailto:ivoryredgrave@gmail.com" variant="outlined">
+            <Button href={`mailto:${props.correo}`} variant="outlined">
               <MailIcon />
-              &nbsp;Gmail
+              &nbsp;{props.nombreBotonGmail}
             </Button>
 
             <Button
-              href="https://api.whatsapp.com/send?text=¡Hola!&phone=+18493861171"
+              href={props.urlWhatsapp}
               variant="outlined"
               target="_blank"
               rel="noopener noreferrer"
             >
               <WhatsAppIcon />
-              &nbsp;WhatsApp
+              &nbsp;{props.nombreBotonWhatsapp}
             </Button>
           </Stack>
         </Container>
@@ -88,7 +84,7 @@ export default function Footer() {
           color="text.secondary"
           component="p"
         >
-          Desarrollado con ❤️ por Carlos Javier López
+          {props.textoFinalFooter}
         </Typography>
 
         <Stack
