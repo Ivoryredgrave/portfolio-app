@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.44aab301.js",
+    "main.js": "/portfolio-app/static/js/main.75952caf.js",
     "static/media/videoMenuUE4.mp4": "/portfolio-app/static/media/videoMenuUE4.71a5589d8590e99f600c.mp4",
     "static/media/perfil-logo.jpg": "/portfolio-app/static/media/perfil-logo.1b978223f79b0d635919.jpg",
-    "static/media/cv.pdf": "/portfolio-app/static/media/cv.a1dbfe00b5e8519923a5.pdf",
     "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
     "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
+    "static/media/cv.pdf": "/portfolio-app/static/media/cv.c62db2a7de07a031442e.pdf",
     "static/media/portfolio-preview.jpg": "/portfolio-app/static/media/portfolio-preview.bf512c32b36eb1d38389.jpg",
     "static/media/ivorybot3.jpg": "/portfolio-app/static/media/ivorybot3.d5c8508d24093d7affa3.jpg",
     "static/media/ivorybot4.jpg": "/portfolio-app/static/media/ivorybot4.b358d59e5298a4d11657.jpg",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.44aab301.js"
+    "static/js/main.75952caf.js"
   ]
 }
