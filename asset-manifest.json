@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.75952caf.js",
+    "main.js": "/portfolio-app/static/js/main.704ca68c.js",
+    "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
     "static/media/videoMenuUE4.mp4": "/portfolio-app/static/media/videoMenuUE4.71a5589d8590e99f600c.mp4",
+    "static/media/preview-galleryapp.png": "/portfolio-app/static/media/preview-galleryapp.7583dc4988d75d26bc79.png",
     "static/media/perfil-logo.jpg": "/portfolio-app/static/media/perfil-logo.1b978223f79b0d635919.jpg",
     "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
     "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
@@ -26,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.75952caf.js"
+    "static/js/main.704ca68c.js"
   ]
 }
