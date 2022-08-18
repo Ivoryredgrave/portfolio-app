@@ -12,12 +12,15 @@ import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import crudapp from "../multimedia/images/crudapp.png";
 import crudapp2 from "../multimedia/images/crudapp2.png";
 import crudapp3 from "../multimedia/images/crudapp3.png";
 import crudapp4 from "../multimedia/images/crudapp4.png";
 import menuUE4 from "../multimedia/videos/videoMenuUE4.mp4";
+import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
 import menuPreview from "../multimedia/images/menu_ue4.jpg";
+import galleryappPreview from "../multimedia/images/preview-galleryapp.png";
 import portfolio from "../multimedia/images/portfolio-preview.jpg";
 import ivorybot from "../multimedia/images/ivorybot.jpg";
 import ivorybot2 from "../multimedia/images/ivorybot2.jpg";
@@ -424,6 +427,57 @@ export default function Projects() {
             </ButtonGroup>
           </AccordionDetails>
         </Accordion>
+
+        <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel5bh-content"
+            id="panel5bh-header"
+          >
+            <Typography sx={{ width: '33%', flexShrink: 0 }}>Gallery-app</Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              Crud de imágenes.
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="Ant Design" color="info" variant="outlined" />
+            <Chip label="NodeJS" color="success" variant="outlined" />
+            <Chip label="MySQL" color="warning" variant="outlined" />
+            <br />
+            <br />
+            <ImageList>
+              <ImageListItem>
+                <video
+                  src={galleryApp}
+                  poster={galleryappPreview}
+                  width="640"
+                  height="480"
+                  controls
+                  loop
+                />
+              </ImageListItem>
+            </ImageList>
+            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
+              <ButtonGroup
+                color="primary"
+                aria-label="medium secondary button group"
+              >
+                <Button
+                  href="https://github.com/Ivoryredgrave/galleryapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkIcon />
+                  &nbsp;Código fuente
+                </Button>
+
+              </ButtonGroup>
+            </Stack>
+          </AccordionDetails>
+        </Accordion>
+
       </Container>
     </div>
   );
