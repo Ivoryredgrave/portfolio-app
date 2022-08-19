@@ -123,10 +123,13 @@ export default function Projects() {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="Ant Design" color="info" variant="outlined" />
-            <Chip label="NodeJS" color="success" variant="outlined" />
-            <Chip label="MySQL" color="warning" variant="outlined" />
+            <Stack spacing={1} direction="row">
+              <Chip label="ReactJS" color="primary" variant="outlined" />
+              <Chip label="Ant Design" color="info" variant="outlined" />
+              <Chip label="NodeJS" color="success" variant="outlined" />
+              <Chip label="MySQL" color="warning" variant="outlined" />
+            </Stack>
+
             <br />
             <br />
             <Typography variant="body1" gutterBottom>
@@ -274,9 +277,11 @@ export default function Projects() {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="MUI" color="info" variant="outlined" />
-            <Chip label="CSS" color="secondary" variant="outlined" />
+            <Stack spacing={1} direction="row">
+              <Chip label="ReactJS" color="primary" variant="outlined" />
+              <Chip label="MUI" color="info" variant="outlined" />
+              <Chip label="CSS" color="secondary" variant="outlined" />
+            </Stack>
             <br />
             <br />
             <ImageList sx={{ height: 512 }} cols={1}>
@@ -389,9 +394,12 @@ export default function Projects() {
           </AccordionSummary>
           <AccordionDetails>
 
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="MUI" color="info" variant="outlined" />
-            <Chip label="CSS" color="secondary" variant="outlined" />
+            <Stack spacing={1} direction="row">
+              <Chip label="ReactJS" color="primary" variant="outlined" />
+              <Chip label="MUI" color="info" variant="outlined" />
+              <Chip label="CSS" color="secondary" variant="outlined" />
+            </Stack>
+
             <br />
             <br />
             <ImageList sx={{ height: 512 }} cols={1}>
@@ -441,10 +449,13 @@ export default function Projects() {
           </AccordionSummary>
           <AccordionDetails>
 
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="Ant Design" color="info" variant="outlined" />
-            <Chip label="NodeJS" color="success" variant="outlined" />
-            <Chip label="MySQL" color="warning" variant="outlined" />
+            <Stack spacing={1} direction="row">
+              <Chip label="ReactJS" color="primary" variant="outlined" />
+              <Chip label="Ant Design" color="info" variant="outlined" />
+              <Chip label="NodeJS" color="success" variant="outlined" />
+              <Chip label="MySQL" color="warning" variant="outlined" />
+            </Stack>
+
             <br />
             <br />
             <ImageList>
