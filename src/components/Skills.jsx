@@ -6,15 +6,12 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
-import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
 import html5logo from "../multimedia/images/html5-logo.png";
 import css3logo from "../multimedia/images/css3-logo.png";
 import mysqllogo from "../multimedia/images/mysql-logo.png";
 import nodejslogo from "../multimedia/images/nodejs-logo.png";
 import reactjslogo from "../multimedia/images/reactjs-logo.png";
 import ue4logo from "../multimedia/images/ue4-logo.png";
-import { StyledRating } from "../styles/components/muiStyles";
 
 export default function Skills() {
   return (
@@ -45,9 +42,8 @@ export default function Skills() {
                 image={html5logo}
                 alt="random"
               />
-
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
                   HTML5
                 </Typography>
                 <Box
@@ -55,14 +51,6 @@ export default function Skills() {
                     "& > legend": { mt: 2 },
                   }}
                 >
-                  <StyledRating
-                    name="customized-color"
-                    defaultValue={2}
-                    readOnly
-                    precision={0.5}
-                    icon={<CircleRoundedIcon fontSize="inherit" />}
-                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                  />
                 </Box>
               </CardContent>
             </Card>
@@ -83,7 +71,7 @@ export default function Skills() {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
                   CSS3
                 </Typography>
                 <Box
@@ -91,14 +79,6 @@ export default function Skills() {
                     "& > legend": { mt: 2 },
                   }}
                 >
-                  <StyledRating
-                    name="customized-color"
-                    defaultValue={2}
-                    readOnly
-                    precision={0.5}
-                    icon={<CircleRoundedIcon fontSize="inherit" />}
-                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                  />
                 </Box>
               </CardContent>
             </Card>
@@ -119,7 +99,7 @@ export default function Skills() {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
                   ReactJS
                 </Typography>
                 <Box
@@ -127,14 +107,6 @@ export default function Skills() {
                     "& > legend": { mt: 2 },
                   }}
                 >
-                  <StyledRating
-                    name="customized-color"
-                    defaultValue={2}
-                    readOnly
-                    precision={0.5}
-                    icon={<CircleRoundedIcon fontSize="inherit" />}
-                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                  />
                 </Box>
               </CardContent>
             </Card>
@@ -155,7 +127,7 @@ export default function Skills() {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
                   NodeJS
                 </Typography>
                 <Box
@@ -163,14 +135,6 @@ export default function Skills() {
                     "& > legend": { mt: 2 },
                   }}
                 >
-                  <StyledRating
-                    name="customized-color"
-                    defaultValue={2}
-                    readOnly
-                    precision={0.5}
-                    icon={<CircleRoundedIcon fontSize="inherit" />}
-                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                  />
                 </Box>
               </CardContent>
             </Card>
@@ -191,7 +155,7 @@ export default function Skills() {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
                   MySQL
                 </Typography>
                 <Box
@@ -199,14 +163,6 @@ export default function Skills() {
                     "& > legend": { mt: 2 },
                   }}
                 >
-                  <StyledRating
-                    name="customized-color"
-                    defaultValue={2}
-                    readOnly
-                    precision={0.5}
-                    icon={<CircleRoundedIcon fontSize="inherit" />}
-                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                  />
                 </Box>
               </CardContent>
             </Card>
@@ -227,7 +183,7 @@ export default function Skills() {
               />
 
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
                   Unreal Engine 4 Blueprints
                 </Typography>
                 <Box
@@ -235,18 +191,11 @@ export default function Skills() {
                     "& > legend": { mt: 2 },
                   }}
                 >
-                  <StyledRating
-                    name="customized-color"
-                    defaultValue={3}
-                    readOnly
-                    precision={0.5}
-                    icon={<CircleRoundedIcon fontSize="inherit" />}
-                    emptyIcon={<CircleOutlinedIcon fontSize="inherit" />}
-                  />
                 </Box>
               </CardContent>
             </Card>
           </Grid>
+
         </Grid>
       </Container>
       <br />
