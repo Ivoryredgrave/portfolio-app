@@ -21,17 +21,19 @@ import menuUE4 from "../multimedia/videos/videoMenuUE4.mp4";
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
 import menuPreview from "../multimedia/images/menu_ue4.jpg";
 import galleryappPreview from "../multimedia/images/preview-galleryapp.png";
-import portfolio from "../multimedia/images/portfolio-preview.jpg";
 import ivorybot from "../multimedia/images/ivorybot.jpg";
 import ivorybot2 from "../multimedia/images/ivorybot2.jpg";
 import ivorybot3 from "../multimedia/images/ivorybot3.jpg";
 import ivorybot4 from "../multimedia/images/ivorybot4.jpg";
 import testiahri from "../multimedia/images/testi-ahri.jpg";
 import testijinx from "../multimedia/images/testi-jinx.jpg";
+import portfolio from "../multimedia/images/Portfolio.png";
+import portfolio2 from "../multimedia/images/Portfolio2.png";
+import portfolio3 from "../multimedia/images/Portfolio3.png";
 
 export default function Projects() {
 
-  const dataItem = [
+  const crudAppImagenes = [
     {
       img: crudapp,
     },
@@ -46,7 +48,19 @@ export default function Projects() {
     },
   ];
 
-  const itemData = [
+  const portfolioImagenes = [
+    {
+      img: portfolio,
+    },
+    {
+      img: portfolio2,
+    },
+    {
+      img: portfolio3,
+    },
+  ];
+
+  const ivorybotImagenes = [
     {
       img: ivorybot,
     },
@@ -61,7 +75,7 @@ export default function Projects() {
     },
   ];
 
-  const imgTestiApp = [
+  const testiappImagenes = [
     {
       img: testijinx,
     },
@@ -123,12 +137,11 @@ export default function Projects() {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Stack spacing={1} direction="row">
-              <Chip label="ReactJS" color="primary" variant="outlined" />
-              <Chip label="Ant Design" color="info" variant="outlined" />
-              <Chip label="NodeJS" color="success" variant="outlined" />
-              <Chip label="MySQL" color="warning" variant="outlined" />
-            </Stack>
+
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="Ant Design" color="info" variant="outlined" />
+            <Chip label="NodeJS" color="success" variant="outlined" />
+            <Chip label="MySQL" color="warning" variant="outlined" />
 
             <br />
             <br />
@@ -157,7 +170,7 @@ export default function Projects() {
             </Typography>
             <br />
             <ImageList sx={{ height: 512 }} cols={1}>
-              {dataItem.map((item) => (
+              {crudAppImagenes.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
                     src={`${item.img}`}
@@ -277,22 +290,24 @@ export default function Projects() {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Stack spacing={1} direction="row">
-              <Chip label="ReactJS" color="primary" variant="outlined" />
-              <Chip label="MUI" color="info" variant="outlined" />
-              <Chip label="CSS" color="secondary" variant="outlined" />
-            </Stack>
+
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="MUI" color="info" variant="outlined" />
+            <Chip label="CSS" color="secondary" variant="outlined" />
+
             <br />
             <br />
             <ImageList sx={{ height: 512 }} cols={1}>
-              <ImageListItem>
-                <img
-                  src={portfolio}
-                  srcSet={portfolio}
-                  alt={"portfolio"}
-                  loading="lazy"
-                />
-              </ImageListItem>
+              {portfolioImagenes.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    src={`${item.img}`}
+                    srcSet={`${item.img}`}
+                    alt={"portafolioimg"}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
             </ImageList>
             <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
               <ButtonGroup
@@ -341,7 +356,7 @@ export default function Projects() {
             <br />
             <br />
             <ImageList sx={{ height: 512 }} cols={1}>
-              {itemData.map((item) => (
+              {ivorybotImagenes.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
                     src={`${item.img}`}
@@ -384,16 +399,14 @@ export default function Projects() {
           </AccordionSummary>
           <AccordionDetails>
 
-            <Stack spacing={1} direction="row">
-              <Chip label="ReactJS" color="primary" variant="outlined" />
-              <Chip label="MUI" color="info" variant="outlined" />
-              <Chip label="CSS" color="secondary" variant="outlined" />
-            </Stack>
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="MUI" color="info" variant="outlined" />
+            <Chip label="CSS" color="secondary" variant="outlined" />
 
             <br />
             <br />
             <ImageList sx={{ height: 512 }} cols={1}>
-              {imgTestiApp.map((item) => (
+              {testiappImagenes.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
                     src={`${item.img}`}
@@ -439,12 +452,10 @@ export default function Projects() {
           </AccordionSummary>
           <AccordionDetails>
 
-            <Stack spacing={1} direction="row">
-              <Chip label="ReactJS" color="primary" variant="outlined" />
-              <Chip label="Ant Design" color="info" variant="outlined" />
-              <Chip label="NodeJS" color="success" variant="outlined" />
-              <Chip label="MySQL" color="warning" variant="outlined" />
-            </Stack>
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="Ant Design" color="info" variant="outlined" />
+            <Chip label="NodeJS" color="success" variant="outlined" />
+            <Chip label="MySQL" color="warning" variant="outlined" />
 
             <br />
             <br />

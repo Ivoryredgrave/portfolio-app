@@ -17,7 +17,8 @@
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
     "react-swipeable-views": "^0.14.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "typewriter-effect": "^2.19.0"
   },
   "scripts": {
     "start": "react-scripts start",

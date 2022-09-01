@@ -43,7 +43,11 @@ export default function Skills() {
                 alt="random"
               />
               <CardContent sx={{ flexGrow: 1 }}>
-                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
+                <Typography
+                  style={{ textAlign: "center" }}
+                  gutterBottom
+                  variant="h5"
+                  component="h2">
                   HTML5
                 </Typography>
                 <Box

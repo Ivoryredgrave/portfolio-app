@@ -4,6 +4,7 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme } from "./styles/components/muiStyles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -25,9 +26,10 @@ function App() {
                     tituloContacto="Contacto"
                 />
                 <AboutMe
-                    alt="Foto de Carlos Javier"
-                    imagenPerfil="perfil-logo.jpg"
-                    descripcionPerfil="¡Hola! Me llamo Carlos Javier López, soy desarrollador web junior en ReactJS."
+                    nombrePerfil="Carlos Javier López Morilla"
+                    descripcionPerfil="¡Hola! Me llamo"
+                    descripcionPerfil1="Soy desarrollador web junior en ReactJS, 
+                    amante del anime y apasionado por el game development."
                     abrirCV="cv.pdf"
                     descripcionBotonCV="Ver hoja de vida"
                 />

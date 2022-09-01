@@ -47,6 +47,7 @@ export default function Footer(props) {
           </Typography>
 
           <Typography
+          component="h1"
             variant="h5"
             align="center"
             color="text.secondary"
@@ -82,7 +83,7 @@ export default function Footer(props) {
           variant="subtitle1"
           align="center"
           color="text.secondary"
-          component="p"
+          component="h1"
         >
           {props.textoFinalFooter}
         </Typography>
