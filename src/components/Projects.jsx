@@ -27,9 +27,8 @@ import ivorybot3 from "../multimedia/images/ivorybot3.jpg";
 import ivorybot4 from "../multimedia/images/ivorybot4.jpg";
 import testiahri from "../multimedia/images/testi-ahri.jpg";
 import testijinx from "../multimedia/images/testi-jinx.jpg";
-import portfolio from "../multimedia/images/Portfolio.png";
-import portfolio2 from "../multimedia/images/Portfolio2.png";
-import portfolio3 from "../multimedia/images/Portfolio3.png";
+import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.png";
+import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.png";
 
 export default function Projects() {
 
@@ -48,16 +47,13 @@ export default function Projects() {
     },
   ];
 
-  const portfolioImagenes = [
+  const RickAndMortyAppImagenes = [
     {
-      img: portfolio,
+      img: RickAndMortyApp,
     },
     {
-      img: portfolio2,
-    },
-    {
-      img: portfolio3,
-    },
+      img: RickAndMortyApp2,
+    }
   ];
 
   const ivorybotImagenes = [
@@ -283,27 +279,27 @@ export default function Projects() {
             id="panel3bh-header"
           >
             <Typography sx={{ width: '33%', flexShrink: 0 }}>
-              Portfolio-app
+              Rick-And-Morty-app
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>
-              Portafolio personal.
+              Consumiento api de Rick And Morty.
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
 
             <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="MUI" color="info" variant="outlined" />
-            <Chip label="CSS" color="secondary" variant="outlined" />
+            <Chip label="Ant Design" color="info" variant="outlined" />
 
             <br />
             <br />
+
             <ImageList sx={{ height: 512 }} cols={1}>
-              {portfolioImagenes.map((item) => (
+              {RickAndMortyAppImagenes.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
                     src={`${item.img}`}
                     srcSet={`${item.img}`}
-                    alt={"portafolioimg"}
+                    alt={"RickAndMortyApp"}
                     loading="lazy"
                   />
                 </ImageListItem>
@@ -315,7 +311,7 @@ export default function Projects() {
                 aria-label="medium secondary button group"
               >
                 <Button
-                  href="https://github.com/Ivoryredgrave/portfolio-app"
+                  href="https://github.com/Ivoryredgrave/RickAndMortyApp"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -323,7 +319,7 @@ export default function Projects() {
                   &nbsp;Código fuente
                 </Button>
                 <Button
-                  href="https://ivoryredgrave.github.io/portfolio-app/"
+                  href="https://ivoryredgrave.github.io/RickAndMortyApp/"
                   target="_blank"
                   color="success"
                   rel="noopener noreferrer">

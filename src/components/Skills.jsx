@@ -1,208 +1,57 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import Box from "@mui/material/Box";
+
 import html5logo from "../multimedia/images/html5-logo.png";
 import css3logo from "../multimedia/images/css3-logo.png";
 import mysqllogo from "../multimedia/images/mysql-logo.png";
 import nodejslogo from "../multimedia/images/nodejs-logo.png";
-import reactjslogo from "../multimedia/images/reactjs-logo.png";
+import reactlogo from "../multimedia/images/react-logo.png";
 import ue4logo from "../multimedia/images/ue4-logo.png";
+import javascriptlogo from "../multimedia/images/javascript-logo.png";
+import githublogo from "../multimedia/images/github-logo.png";
+import antdlogo from "../multimedia/images/ant-design-logo.png";
 
 export default function Skills() {
   return (
     <div id="skills">
-      <Container sx={{ py: 4 }} maxWidth="md">
+      <Container >
+
         <Typography
           component="h1"
           variant="h2"
           align="center"
           color="text.primary"
-          gutterBottom
-        >
-          Habilidades
-        </Typography>
+          gutterBottom > Habilidades </Typography>
 
-        <Grid container spacing={4}>
+        <Box display="flex" justifyContent="center">
+          <Stack direction="row" spacing={1}>
+            <Avatar sx={{ width: 74, height: 74 }} alt="Remy Sharp" src={html5logo} />
+            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={css3logo} />
+            <Avatar sx={{ width: 74, height: 74 }} alt="Cindy Baker" src={javascriptlogo} />
+          </Stack>
+        </Box>
 
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                sx={{
-                  // 16:9
-                  pt: "16.25%",
-                }}
-                image={html5logo}
-                alt="random"
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography
-                  style={{ textAlign: "center" }}
-                  gutterBottom
-                  variant="h5"
-                  component="h2">
-                  HTML5
-                </Typography>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
+        <Box display="flex" justifyContent="center">
+          <Stack direction="row" spacing={1}>
+            <Avatar sx={{ width: 74, height: 74 }} alt="Remy Sharp" src={reactlogo} />
+            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={antdlogo} />
+            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={githublogo} />
+          </Stack>
+        </Box>
 
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                sx={{
-                  // 16:9
-                  pt: "16.25%",
-                }}
-                image={css3logo}
-                alt="random"
-              />
+        <Box display="flex" justifyContent="center">
+          <Stack direction="row" spacing={1}>
+            <Avatar sx={{ width: 74, height: 74 }} alt="Remy Sharp" src={nodejslogo} />
+            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={mysqllogo} />
+            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={ue4logo} />
+          </Stack>
+        </Box>
 
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
-                  CSS3
-                </Typography>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                sx={{
-                  // 16:9
-                  pt: "16.25%",
-                }}
-                image={reactjslogo}
-                alt="random"
-              />
-
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
-                  ReactJS
-                </Typography>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                sx={{
-                  // 16:9
-                  pt: "16.25%",
-                }}
-                image={nodejslogo}
-                alt="random"
-              />
-
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
-                  NodeJS
-                </Typography>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                sx={{
-                  // 16:9
-                  pt: "16.25%",
-                }}
-                image={mysqllogo}
-                alt="random"
-              />
-
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
-                  MySQL
-                </Typography>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{ height: "100%", display: "flex", flexDirection: "column" }}
-            >
-              <CardMedia
-                component="img"
-                sx={{
-                  // 16:9
-                  pt: "16.25%",
-                }}
-                image={ue4logo}
-                alt="random"
-              />
-
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography style={{ textAlign: "center" }} gutterBottom variant="h5" component="h2">
-                  Unreal Engine 4 Blueprints
-                </Typography>
-                <Box
-                  sx={{
-                    "& > legend": { mt: 2 },
-                  }}
-                >
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-
-        </Grid>
       </Container>
-      <br />
     </div>
   );
 }

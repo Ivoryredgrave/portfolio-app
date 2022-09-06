@@ -28,7 +28,7 @@ function App() {
                 <AboutMe
                     nombrePerfil="Carlos Javier López Morilla"
                     descripcionPerfil="¡Hola! Me llamo"
-                    descripcionPerfil1="Soy desarrollador web junior en ReactJS, 
+                    descripcionPerfil1="Soy desarrollador web junior en React, 
                     amante del anime y apasionado por el game development."
                     abrirCV="cv.pdf"
                     descripcionBotonCV="Ver hoja de vida"
