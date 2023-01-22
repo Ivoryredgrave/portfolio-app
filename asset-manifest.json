@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.f9f51d83.js",
+    "main.js": "/portfolio-app/static/js/main.2ff69493.js",
     "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
     "static/media/videoMenuUE4.mp4": "/portfolio-app/static/media/videoMenuUE4.71a5589d8590e99f600c.mp4",
     "static/media/preview-galleryapp.png": "/portfolio-app/static/media/preview-galleryapp.7583dc4988d75d26bc79.png",
@@ -18,7 +18,7 @@
     "static/media/crudapp2.png": "/portfolio-app/static/media/crudapp2.d3ea47260c644474a7b8.png",
     "static/media/ivorybot2.jpg": "/portfolio-app/static/media/ivorybot2.91a0afb4fe83f647cabb.jpg",
     "static/media/nodejs-logo.png": "/portfolio-app/static/media/nodejs-logo.9800c5fbafba08db82da.png",
-    "static/media/cv.pdf": "/portfolio-app/static/media/cv.f54ec23cca142b8cf1e9.pdf",
+    "static/media/cv.pdf": "/portfolio-app/static/media/cv.67244cdcedcc551d2f0e.pdf",
     "static/media/react-logo.png": "/portfolio-app/static/media/react-logo.3123d4b8be14c35d5d90.png",
     "static/media/github-logo.png": "/portfolio-app/static/media/github-logo.76826d2ee983bb194e19.png",
     "static/media/ue4-logo.png": "/portfolio-app/static/media/ue4-logo.da3bc6337b8b6c133bff.png",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.f9f51d83.js"
+    "static/js/main.2ff69493.js"
   ]
 }
