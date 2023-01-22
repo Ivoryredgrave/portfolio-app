@@ -3,6 +3,7 @@ import AboutMe from "./components/AboutMe";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+
 import Footer from "./components/Footer";
 
 import { ThemeProvider } from "@mui/material/styles";
@@ -25,14 +26,16 @@ function App() {
                     tituloProyectos="Proyectos"
                     tituloContacto="Contacto"
                 />
+
                 <AboutMe
-                    nombrePerfil="Carlos Javier López Morilla"
                     descripcionPerfil="¡Hola! Me llamo"
+                    nombrePerfil="Carlos Javier López Morilla"
                     descripcionPerfil1="Soy desarrollador web junior en React, 
                     amante del anime y apasionado por el game development."
                     abrirCV="cv.pdf"
                     descripcionBotonCV="Ver hoja de vida"
                 />
+
                 <Education
                     titulo="Educación"
                     nombreSecundaria="Politécnico Don Pepe Álvarez"
@@ -40,8 +43,11 @@ function App() {
                     nombreUniversidad="Universidad Nacional Pedro Henríquez Ureña"
                     subtituloUniversidad="Lic. en Informática | Sept. 2016 - Abr. 2022"
                 />
+
                 <Skills />
+
                 <Projects />
+                
                 <Footer
                     titulo="Contacto"
                     descripcion="Si tienes alguna pregunta o propuesta de trabajo, mi bandeja de
