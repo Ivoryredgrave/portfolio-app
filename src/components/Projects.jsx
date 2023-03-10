@@ -13,10 +13,14 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import crudapp from "../multimedia/images/crudapp.png";
-import crudapp2 from "../multimedia/images/crudapp2.png";
-import crudapp3 from "../multimedia/images/crudapp3.png";
-import crudapp4 from "../multimedia/images/crudapp4.png";
+import crudapp from "../multimedia/images/crudapp.jpg";
+import crudapp2 from "../multimedia/images/crudapp2.jpg";
+import crudapp3 from "../multimedia/images/crudapp3.jpg";
+import crudapp4 from "../multimedia/images/crudapp4.jpg";
+import crudapp5 from "../multimedia/images/crudapp5.jpg";
+import crudapp6 from "../multimedia/images/crudapp6.jpg";
+import crudapp7 from "../multimedia/images/crudapp7.jpg";
+import crudapp8 from "../multimedia/images/crudapp8.jpg";
 import menuUE4 from "../multimedia/videos/videoMenuUE4.mp4";
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
 import menuPreview from "../multimedia/images/menu_ue4.jpg";
@@ -44,6 +48,18 @@ export default function Projects() {
     },
     {
       img: crudapp4,
+    },
+    {
+      img: crudapp5,
+    },
+    {
+      img: crudapp6,
+    },
+    {
+      img: crudapp7,
+    },
+    {
+      img: crudapp8,
     },
   ];
 
@@ -141,6 +157,7 @@ export default function Projects() {
 
             <br />
             <br />
+
             <Typography variant="body1" gutterBottom>
               ☑️ Ventana de iniciar sesión.
             </Typography>
@@ -162,9 +179,11 @@ export default function Projects() {
             </Typography>
 
             <Typography variant="body1" gutterBottom>
-              ☑️ Emisión de reportes en formato PDF, CSV y XLSX.
+              ☑️ Emisión de reportes en formato PDF y XLSX.
             </Typography>
+
             <br />
+
             <ImageList sx={{ height: 512 }} cols={1}>
               {crudAppImagenes.map((item) => (
                 <ImageListItem key={item.img}>
@@ -205,8 +224,10 @@ export default function Projects() {
               color="default"
               variant="outlined"
             />
+
             <br />
             <br />
+
             <Typography variant="body1" gutterBottom>
               ☑️ Menú de pausa al presionar la tecla ESC.
             </Typography>
@@ -230,7 +251,9 @@ export default function Projects() {
             <Typography variant="body1" gutterBottom>
               ☑️ Guardado automático de la ventana de ajustes.
             </Typography>
+
             <br />
+
             <ImageList>
               <ImageListItem>
                 <video
@@ -349,8 +372,10 @@ export default function Projects() {
               color="primary"
               variant="outlined"
             />
+
             <br />
             <br />
+
             <ImageList sx={{ height: 512 }} cols={1}>
               {ivorybotImagenes.map((item) => (
                 <ImageListItem key={item.img}>
@@ -401,6 +426,7 @@ export default function Projects() {
 
             <br />
             <br />
+
             <ImageList sx={{ height: 512 }} cols={1}>
               {testiappImagenes.map((item) => (
                 <ImageListItem key={item.img}>
@@ -455,6 +481,7 @@ export default function Projects() {
 
             <br />
             <br />
+
             <ImageList>
               <ImageListItem>
                 <video
