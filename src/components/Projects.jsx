@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
@@ -8,11 +8,10 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
 import LinkIcon from "@mui/icons-material/Link";
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import crudapp from "../multimedia/images/crudapp.jpg";
 import crudapp2 from "../multimedia/images/crudapp2.jpg";
 import crudapp3 from "../multimedia/images/crudapp3.jpg";
@@ -21,21 +20,17 @@ import crudapp5 from "../multimedia/images/crudapp5.jpg";
 import crudapp6 from "../multimedia/images/crudapp6.jpg";
 import crudapp7 from "../multimedia/images/crudapp7.jpg";
 import crudapp8 from "../multimedia/images/crudapp8.jpg";
-import menuUE4 from "../multimedia/videos/videoMenuUE4.mp4";
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
-import menuPreview from "../multimedia/images/menu_ue4.jpg";
 import galleryappPreview from "../multimedia/images/preview-galleryapp.png";
-import ivorybot from "../multimedia/images/ivorybot.jpg";
-import ivorybot2 from "../multimedia/images/ivorybot2.jpg";
-import ivorybot3 from "../multimedia/images/ivorybot3.jpg";
-import ivorybot4 from "../multimedia/images/ivorybot4.jpg";
 import testiahri from "../multimedia/images/testi-ahri.jpg";
 import testijinx from "../multimedia/images/testi-jinx.jpg";
 import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.png";
 import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.png";
 
-export default function Projects() {
+import artistPort from "../multimedia/images/artist-portfolio.jpg";
+import artistPort2 from "../multimedia/images/artist-portfolio2.jpg";
 
+export default function Projects() {
   const crudAppImagenes = [
     {
       img: crudapp,
@@ -69,21 +64,6 @@ export default function Projects() {
     },
     {
       img: RickAndMortyApp2,
-    }
-  ];
-
-  const ivorybotImagenes = [
-    {
-      img: ivorybot,
-    },
-    {
-      img: ivorybot2,
-    },
-    {
-      img: ivorybot3,
-    },
-    {
-      img: ivorybot4,
     },
   ];
 
@@ -94,10 +74,18 @@ export default function Projects() {
     {
       img: testiahri,
     },
-
   ];
 
-  const [expanded, setExpanded] = React.useState('panel1');
+  const portfolioArtistImagenes = [
+    {
+      img: artistPort,
+    },
+    {
+      img: artistPort2,
+    },
+  ];
+
+  const [expanded, setExpanded] = React.useState("panel1");
 
   const buttons = [
     <Button
@@ -135,21 +123,23 @@ export default function Projects() {
           Proyectos
         </Typography>
 
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <Accordion
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1bh-content"
             id="panel1bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
+            <Typography sx={{ width: "33%", flexShrink: 0 }}>
               Crud-app
             </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
+            <Typography sx={{ color: "text.secondary" }}>
               Plantilla responsiva en base a las funciones de un CRUD.
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-
             <Chip label="ReactJS" color="primary" variant="outlined" />
             <Chip label="Ant Design" color="info" variant="outlined" />
             <Chip label="NodeJS" color="success" variant="outlined" />
@@ -207,109 +197,23 @@ export default function Projects() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2bh-content"
-            id="panel2bh-header"
-          >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Menu-template</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              Menú responsivo.
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Chip
-              label="Unreal Engine 4.27.2"
-              color="default"
-              variant="outlined"
-            />
-
-            <br />
-            <br />
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Menú de pausa al presionar la tecla ESC.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Ventana de carga (loading...).
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Ventana de créditos.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Pantalla completa y modo ventana.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Controlar volumen de música y efectos.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Guardado automático de la ventana de ajustes.
-            </Typography>
-
-            <br />
-
-            <ImageList>
-              <ImageListItem>
-                <video
-                  src={menuUE4}
-                  poster={menuPreview}
-                  width="640"
-                  height="480"
-                  controls
-                  loop
-                />
-              </ImageListItem>
-            </ImageList>
-            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-              <ButtonGroup
-                color="primary"
-                aria-label="medium secondary button group"
-              >
-                <Button
-                  href="https://github.com/Ivoryredgrave/PlantillaMenuUE4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon />
-                  &nbsp;Código fuente
-                </Button>
-
-                <Button
-                  href="https://ivoryredgrave.itch.io/menu-template-ue4"
-                  target="_blank"
-                  color="success"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon />
-                  &nbsp;Demo
-                </Button>
-
-              </ButtonGroup>
-            </Stack>
-          </AccordionDetails>
-        </Accordion>
-
-        <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+        <Accordion
+          expanded={expanded === "panel2"}
+          onChange={handleChange("panel2")}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3bh-content"
             id="panel3bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>
+            <Typography sx={{ width: "33%", flexShrink: 0 }}>
               Rick-And-Morty-app
             </Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
+            <Typography sx={{ color: "text.secondary" }}>
               Consumiento api de Rick And Morty.
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-
             <Chip label="ReactJS" color="primary" variant="outlined" />
             <Chip label="Ant Design" color="info" variant="outlined" />
 
@@ -345,7 +249,8 @@ export default function Projects() {
                   href="https://ivoryredgrave.github.io/RickAndMortyApp/"
                   target="_blank"
                   color="success"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   <LinkIcon />
                   &nbsp;Demo
                 </Button>
@@ -354,35 +259,37 @@ export default function Projects() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <Accordion
+          expanded={expanded === "panel3"}
+          onChange={handleChange("panel3")}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Ivory-bot</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
-              Bot para discord con comandos básicos.
+            <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              Artist-portfolio
+            </Typography>
+            <Typography sx={{ color: "text.secondary" }}>
+              Portafolio para artistas.
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-
-            <Chip
-              label="Discord.js v12"
-              color="primary"
-              variant="outlined"
-            />
+            <Chip label="ReactJS" color="primary" variant="outlined" />
+            <Chip label="MUI" color="info" variant="outlined" />
+            <Chip label="CSS" color="secondary" variant="outlined" />
 
             <br />
             <br />
 
             <ImageList sx={{ height: 512 }} cols={1}>
-              {ivorybotImagenes.map((item) => (
+              {portfolioArtistImagenes.map((item) => (
                 <ImageListItem key={item.img}>
                   <img
                     src={`${item.img}`}
                     srcSet={`${item.img}`}
-                    alt={"ivorybot"}
+                    alt={"testiapp"}
                     loading="lazy"
                   />
                 </ImageListItem>
@@ -394,32 +301,43 @@ export default function Projects() {
               aria-label="medium secondary button group"
             >
               <Button
-                href="https://github.com/Ivoryredgrave/ivorybot"
+                href="https://github.com/Ivoryredgrave/artist-portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkIcon />
                 &nbsp;Código fuente
               </Button>
-
+              <Button
+                href="https://ivoryredgrave.github.io/artist-portfolio/"
+                target="_blank"
+                color="success"
+                rel="noopener noreferrer"
+              >
+                <LinkIcon />
+                &nbsp;Demo
+              </Button>
             </ButtonGroup>
-
           </AccordionDetails>
         </Accordion>
 
-        <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+        <Accordion
+          expanded={expanded === "panel4"}
+          onChange={handleChange("panel4")}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel4bh-content"
             id="panel4bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Testi-app</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
+            <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              Testi-app
+            </Typography>
+            <Typography sx={{ color: "text.secondary" }}>
               Testimonio de clientes.
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-
             <Chip label="ReactJS" color="primary" variant="outlined" />
             <Chip label="MUI" color="info" variant="outlined" />
             <Chip label="CSS" color="secondary" variant="outlined" />
@@ -441,11 +359,13 @@ export default function Projects() {
             </ImageList>
             <ButtonGroup
               color="primary"
-              aria-label="medium secondary button group">
+              aria-label="medium secondary button group"
+            >
               <Button
                 href="https://github.com/Ivoryredgrave/testiAPP"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <LinkIcon />
                 &nbsp;Código fuente
               </Button>
@@ -453,7 +373,8 @@ export default function Projects() {
                 href="https://ivoryredgrave.github.io/testiAPP/"
                 target="_blank"
                 color="success"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <LinkIcon />
                 &nbsp;Demo
               </Button>
@@ -461,19 +382,23 @@ export default function Projects() {
           </AccordionDetails>
         </Accordion>
 
-        <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+        <Accordion
+          expanded={expanded === "panel5"}
+          onChange={handleChange("panel5")}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel5bh-content"
             id="panel5bh-header"
           >
-            <Typography sx={{ width: '33%', flexShrink: 0 }}>Gallery-app</Typography>
-            <Typography sx={{ color: 'text.secondary' }}>
+            <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              Gallery-app
+            </Typography>
+            <Typography sx={{ color: "text.secondary" }}>
               Crud de imágenes.
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-
             <Chip label="ReactJS" color="primary" variant="outlined" />
             <Chip label="Ant Design" color="info" variant="outlined" />
             <Chip label="NodeJS" color="success" variant="outlined" />
@@ -507,12 +432,10 @@ export default function Projects() {
                   <LinkIcon />
                   &nbsp;Código fuente
                 </Button>
-
               </ButtonGroup>
             </Stack>
           </AccordionDetails>
         </Accordion>
-
       </Container>
     </div>
   );

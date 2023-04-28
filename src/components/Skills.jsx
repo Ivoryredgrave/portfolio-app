@@ -1,57 +1,52 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-import html5logo from "../multimedia/images/html5-logo.png";
-import css3logo from "../multimedia/images/css3-logo.png";
-import mysqllogo from "../multimedia/images/mysql-logo.png";
-import nodejslogo from "../multimedia/images/nodejs-logo.png";
-import reactlogo from "../multimedia/images/react-logo.png";
-import ue4logo from "../multimedia/images/ue4-logo.png";
-import javascriptlogo from "../multimedia/images/javascript-logo.png";
-import githublogo from "../multimedia/images/github-logo.png";
-import antdlogo from "../multimedia/images/ant-design-logo.png";
+export default function Skills(props) {
+  const { avatars } = props;
 
-export default function Skills() {
+  // Creamos un array que contiene todos los avatares
+  const allAvatars = avatars.flat();
+
+  // Dividimos los avatares en grupos de a 3
+  const avatarGroups = [];
+  for (let i = 0; i < allAvatars.length; i += 3) {
+    avatarGroups.push(allAvatars.slice(i, i + 3));
+  }
+
   return (
-    <div id="skills">
-      <Container >
+    <>
+      <div id="skills">
+        <Container>
+          <Typography
+            component="h1"
+            variant="h2"
+            align="center"
+            color="text.primary"
+            gutterBottom
+          >
+            {props.textoHabilidades}
+          </Typography>
 
-        <Typography
-          component="h1"
-          variant="h2"
-          align="center"
-          color="text.primary"
-          gutterBottom > Habilidades </Typography>
-
-        <Box display="flex" justifyContent="center">
-          <Stack direction="row" spacing={1}>
-            <Avatar sx={{ width: 74, height: 74 }} alt="Remy Sharp" src={html5logo} />
-            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={css3logo} />
-            <Avatar sx={{ width: 74, height: 74 }} alt="Cindy Baker" src={javascriptlogo} />
-          </Stack>
-        </Box>
-
-        <Box display="flex" justifyContent="center">
-          <Stack direction="row" spacing={1}>
-            <Avatar sx={{ width: 74, height: 74 }} alt="Remy Sharp" src={reactlogo} />
-            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={antdlogo} />
-            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={githublogo} />
-          </Stack>
-        </Box>
-
-        <Box display="flex" justifyContent="center">
-          <Stack direction="row" spacing={1}>
-            <Avatar sx={{ width: 74, height: 74 }} alt="Remy Sharp" src={nodejslogo} />
-            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={mysqllogo} />
-            <Avatar sx={{ width: 74, height: 74 }} alt="Travis Howard" src={ue4logo} />
-          </Stack>
-        </Box>
-
-      </Container>
-    </div>
+          {avatarGroups.map((avatarGroup, index) => (
+            <Box key={index} display="flex" justifyContent="center">
+              <Stack direction="row" spacing={1}>
+                {avatarGroup.map((avatar, index) => (
+                  <Avatar
+                    key={index}
+                    sx={{ width: 74, height: 74 }}
+                    alt={avatar.alt}
+                    src={avatar.src}
+                  />
+                ))}
+              </Stack>
+            </Box>
+          ))}
+        </Container>
+      </div>
+    </>
   );
 }

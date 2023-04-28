@@ -13,6 +13,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 export default function Footer(props) {
   const buttons = [
     <Button
+      key="github"
       href={props.urlGithub}
       target="_blank"
       rel="noopener noreferrer"
@@ -20,6 +21,7 @@ export default function Footer(props) {
       <GitHubIcon />
     </Button>,
     <Button
+      key="linkedin"
       href={props.urlLinkedin}
       target="_blank"
       rel="noopener noreferrer"
@@ -47,7 +49,7 @@ export default function Footer(props) {
           </Typography>
 
           <Typography
-          component="h1"
+            component="h1"
             variant="h5"
             align="center"
             color="text.secondary"
