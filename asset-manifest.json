@@ -1,41 +1,36 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.cb28f00f.js",
+    "main.js": "/portfolio-app/static/js/main.6f19c3d5.js",
     "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
-    "static/media/videoMenuUE4.mp4": "/portfolio-app/static/media/videoMenuUE4.71a5589d8590e99f600c.mp4",
     "static/media/preview-galleryapp.png": "/portfolio-app/static/media/preview-galleryapp.7583dc4988d75d26bc79.png",
     "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
     "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
+    "static/media/artist-portfolio.jpg": "/portfolio-app/static/media/artist-portfolio.c55681efebbc2df6892e.jpg",
     "static/media/RickAndMortyApp2.png": "/portfolio-app/static/media/RickAndMortyApp2.8f4a22a760ef68fd1ac9.png",
     "static/media/crudapp8.jpg": "/portfolio-app/static/media/crudapp8.480bcf28e4aa8ba58195.jpg",
     "static/media/crudapp4.jpg": "/portfolio-app/static/media/crudapp4.13dca9cb9cdfb9919664.jpg",
     "static/media/crudapp7.jpg": "/portfolio-app/static/media/crudapp7.a924771bdc881cbb475d.jpg",
     "static/media/crudapp6.jpg": "/portfolio-app/static/media/crudapp6.c26882cbd2c250a140b3.jpg",
     "static/media/crudapp5.jpg": "/portfolio-app/static/media/crudapp5.22c06d0fd71d485b4f77.jpg",
+    "static/media/artist-portfolio2.jpg": "/portfolio-app/static/media/artist-portfolio2.e378fa3e3f8d4101b359.jpg",
     "static/media/crudapp3.jpg": "/portfolio-app/static/media/crudapp3.e1e1d3cbd9a782dd4023.jpg",
     "static/media/RickAndMortyApp.png": "/portfolio-app/static/media/RickAndMortyApp.9211e047530c9df24a03.png",
     "static/media/crudapp.jpg": "/portfolio-app/static/media/crudapp.209d7bca0b92248c9867.jpg",
-    "static/media/ivorybot3.jpg": "/portfolio-app/static/media/ivorybot3.d5c8508d24093d7affa3.jpg",
-    "static/media/ivorybot4.jpg": "/portfolio-app/static/media/ivorybot4.b358d59e5298a4d11657.jpg",
     "static/media/crudapp2.jpg": "/portfolio-app/static/media/crudapp2.203c60a6d45345c37a72.jpg",
     "static/media/ant-design-logo.png": "/portfolio-app/static/media/ant-design-logo.aa41c0fb5162888575ee.png",
-    "static/media/menu_ue4.jpg": "/portfolio-app/static/media/menu_ue4.15d85180ed0881ab2b2c.jpg",
-    "static/media/ivorybot2.jpg": "/portfolio-app/static/media/ivorybot2.91a0afb4fe83f647cabb.jpg",
     "static/media/nodejs-logo.png": "/portfolio-app/static/media/nodejs-logo.9800c5fbafba08db82da.png",
     "static/media/cv.pdf": "/portfolio-app/static/media/cv.67244cdcedcc551d2f0e.pdf",
     "static/media/react-logo.png": "/portfolio-app/static/media/react-logo.3123d4b8be14c35d5d90.png",
     "static/media/github-logo.png": "/portfolio-app/static/media/github-logo.76826d2ee983bb194e19.png",
-    "static/media/ue4-logo.png": "/portfolio-app/static/media/ue4-logo.da3bc6337b8b6c133bff.png",
     "static/media/mysql-logo.png": "/portfolio-app/static/media/mysql-logo.c0fd643fce30d4054c6a.png",
     "static/media/javascript-logo.png": "/portfolio-app/static/media/javascript-logo.585333f7e1d37f56db51.png",
-    "static/media/ivorybot.jpg": "/portfolio-app/static/media/ivorybot.026008ed19d5ac2a58cf.jpg",
     "static/media/css3-logo.png": "/portfolio-app/static/media/css3-logo.855149922962a193fc1b.png",
     "static/media/html5-logo.png": "/portfolio-app/static/media/html5-logo.d9a3b8d48710328871d5.png",
     "index.html": "/portfolio-app/index.html"
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.cb28f00f.js"
+    "static/js/main.6f19c3d5.js"
   ]
 }
