@@ -11,10 +11,22 @@ import MailIcon from "@mui/icons-material/Mail";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function Footer(props) {
+  const {
+    titulo,
+    descripcion,
+    correo,
+    nombreBotonGmail,
+    urlWhatsapp,
+    nombreBotonWhatsapp,
+    textoFinalFooter,
+    urlGithub,
+    urlLinkedin,
+  } = props;
+
   const buttons = [
     <Button
       key="github"
-      href={props.urlGithub}
+      href={urlGithub}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -22,7 +34,7 @@ export default function Footer(props) {
     </Button>,
     <Button
       key="linkedin"
-      href={props.urlLinkedin}
+      href={urlLinkedin}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -45,7 +57,7 @@ export default function Footer(props) {
             color="text.primary"
             gutterBottom
           >
-            {props.titulo}
+            {titulo}
           </Typography>
 
           <Typography
@@ -55,7 +67,7 @@ export default function Footer(props) {
             color="text.secondary"
             paragraph
           >
-            {props.descripcion}
+            {descripcion}
           </Typography>
 
           <Stack
@@ -64,19 +76,19 @@ export default function Footer(props) {
             spacing={2}
             justifyContent="center"
           >
-            <Button href={`mailto:${props.correo}`} variant="outlined">
+            <Button href={`mailto:${correo}`} variant="outlined">
               <MailIcon />
-              &nbsp;{props.nombreBotonGmail}
+              &nbsp;{nombreBotonGmail}
             </Button>
 
             <Button
-              href={props.urlWhatsapp}
+              href={urlWhatsapp}
               variant="outlined"
               target="_blank"
               rel="noopener noreferrer"
             >
               <WhatsAppIcon />
-              &nbsp;{props.nombreBotonWhatsapp}
+              &nbsp;{nombreBotonWhatsapp}
             </Button>
           </Stack>
         </Container>
@@ -87,7 +99,7 @@ export default function Footer(props) {
           color="text.secondary"
           component="h1"
         >
-          {props.textoFinalFooter}
+          {textoFinalFooter}
         </Typography>
 
         <Stack

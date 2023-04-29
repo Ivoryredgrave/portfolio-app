@@ -9,8 +9,16 @@ import SchoolIcon from "@mui/icons-material/School";
 import Container from "@mui/material/Container";
 
 export default function Education(props) {
+
+  const {
+    titulo,
+    nombreSecundaria,
+    subtituloSecundaria,
+    nombreUniversidad,
+    subtituloUniversidad
+  } = props;
+
   return (
-    <>
       <div id="education">
         <Container sx={{ py: 4 }} maxWidth="md">
           <Typography
@@ -20,7 +28,7 @@ export default function Education(props) {
             color="text.primary"
             gutterBottom
           >
-            {props.titulo}
+            {titulo}
           </Typography>
 
           <List
@@ -39,8 +47,8 @@ export default function Education(props) {
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary={props.nombreSecundaria}
-                secondary={props.subtituloSecundaria}
+                primary={nombreSecundaria}
+                secondary={subtituloSecundaria}
               />
             </ListItem>
           </List>
@@ -61,13 +69,12 @@ export default function Education(props) {
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
-                primary={props.nombreUniversidad}
-                secondary={props.subtituloUniversidad}
+                primary={nombreUniversidad}
+                secondary={subtituloUniversidad}
               />
             </ListItem>
           </List>
         </Container>
       </div>
-    </>
   );
 }

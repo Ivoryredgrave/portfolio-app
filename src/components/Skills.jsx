@@ -6,19 +6,16 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
 export default function Skills(props) {
-  const { avatars } = props;
+  const { textoHabilidades, avatars } = props;
 
-  // Creamos un array que contiene todos los avatares
   const allAvatars = avatars.flat();
 
-  // Dividimos los avatares en grupos de a 3
   const avatarGroups = [];
   for (let i = 0; i < allAvatars.length; i += 3) {
     avatarGroups.push(allAvatars.slice(i, i + 3));
   }
 
   return (
-    <>
       <div id="skills">
         <Container>
           <Typography
@@ -28,7 +25,7 @@ export default function Skills(props) {
             color="text.primary"
             gutterBottom
           >
-            {props.textoHabilidades}
+            {textoHabilidades}
           </Typography>
 
           {avatarGroups.map((avatarGroup, index) => (
@@ -47,6 +44,5 @@ export default function Skills(props) {
           ))}
         </Container>
       </div>
-    </>
   );
 }

@@ -1,17 +1,8 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import Button from "@mui/material/Button";
-import LinkIcon from "@mui/icons-material/Link";
-import Accordion from "@mui/material/Accordion";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CustomAccordion from "./CustomAccordion";
+
 import crudapp from "../multimedia/images/crudapp.jpg";
 import crudapp2 from "../multimedia/images/crudapp2.jpg";
 import crudapp3 from "../multimedia/images/crudapp3.jpg";
@@ -20,17 +11,22 @@ import crudapp5 from "../multimedia/images/crudapp5.jpg";
 import crudapp6 from "../multimedia/images/crudapp6.jpg";
 import crudapp7 from "../multimedia/images/crudapp7.jpg";
 import crudapp8 from "../multimedia/images/crudapp8.jpg";
+
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
-import galleryappPreview from "../multimedia/images/preview-galleryapp.png";
+
 import testiahri from "../multimedia/images/testi-ahri.jpg";
 import testijinx from "../multimedia/images/testi-jinx.jpg";
+
 import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.png";
 import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.png";
 
 import artistPort from "../multimedia/images/artist-portfolio.jpg";
 import artistPort2 from "../multimedia/images/artist-portfolio2.jpg";
 
-export default function Projects() {
+export default function Projects(props) {
+
+  const { titulo } = props;
+
   const crudAppImagenes = [
     {
       img: crudapp,
@@ -85,30 +81,99 @@ export default function Projects() {
     },
   ];
 
-  const [expanded, setExpanded] = React.useState("panel1");
-
-  const buttons = [
-    <Button
-      href="https://github.com/Ivoryredgrave/crudAPP-Frontend"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <LinkIcon />
-      &nbsp;Código fuente Frontend
-    </Button>,
-    <Button
-      href="https://github.com/Ivoryredgrave/crudAPP-Backend"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <LinkIcon />
-      &nbsp;Código fuente Backend
-    </Button>,
+  const botonesCrudApp = [
+    {
+      nombre: "Código fuente Frontend",
+      href: "https://github.com/Ivoryredgrave/crudAPP-Frontend",
+    },
+    {
+      nombre: "Código fuente Backend",
+      href: "https://github.com/Ivoryredgrave/crudAPP-Backend",
+    },
   ];
 
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
+  const botonesRickAndMortyApp = [
+    {
+      nombre: "Código fuente",
+      href: "https://github.com/Ivoryredgrave/RickAndMortyApp",
+    },
+    {
+      nombre: "Demo",
+      href: "https://ivoryredgrave.github.io/RickAndMortyApp/",
+      color: "success",
+    },
+  ];
+
+  const botonesArtistPortfolio = [
+    {
+      nombre: "Código fuente",
+      href: "https://github.com/Ivoryredgrave/artist-portfolio",
+    },
+    {
+      nombre: "Demo",
+      href: "https://ivoryredgrave.github.io/artist-portfolio/",
+      color: "success",
+    },
+  ];
+
+  const botonesTestiApp = [
+    {
+      nombre: "Código fuente",
+      href: "https://github.com/Ivoryredgrave/testiAPP",
+    },
+    {
+      nombre: "Demo",
+      href: "https://ivoryredgrave.github.io/testiAPP/",
+      color: "success",
+    },
+  ];
+
+  const botonesGalleryApp = [
+    {
+      nombre: "Código fuente",
+      href: "https://github.com/Ivoryredgrave/galleryapp",
+    },
+  ];
+
+  const lenguajesCrudApp = [
+    { texto: "ReactJS", color: "primary", variant: "outlined" },
+    { texto: "Ant Design", color: "info", variant: "outlined" },
+    { texto: "NodeJS", color: "success", variant: "outlined" },
+    { texto: "MySQL", color: "warning", variant: "outlined" },
+  ];
+
+  const lenguajesGalleryApp = [
+    { texto: "ReactJS", color: "primary", variant: "outlined" },
+    { texto: "Ant Design", color: "info", variant: "outlined" },
+    { texto: "NodeJS", color: "success", variant: "outlined" },
+    { texto: "MySQL", color: "warning", variant: "outlined" },
+  ];
+
+  const lenguajesRickAndMortyApp = [
+    { texto: "ReactJS", color: "primary", variant: "outlined" },
+    { texto: "Ant Design", color: "info", variant: "outlined" },
+  ];
+
+  const lenguajesArtistPorfolio = [
+    { texto: "ReactJS", color: "primary", variant: "outlined" },
+    { texto: "MUI", color: "info", variant: "outlined" },
+    { texto: "CSS", color: "secondary", variant: "outlined" },
+  ];
+
+  const lenguajesTestiApp = [
+    { texto: "ReactJS", color: "primary", variant: "outlined" },
+    { texto: "MUI", color: "info", variant: "outlined" },
+    { texto: "CSS", color: "secondary", variant: "outlined" },
+  ];
+
+  const detallesCrudApp = [
+    { texto: "☑️ Ventana de iniciar sesión." },
+    { texto: "☑️ Roles de usuario." },
+    { texto: "☑️ Menú lateral." },
+    { texto: "☑️ Resúmenes estadísticos de usuarios." },
+    { texto: "☑️ Añadir y modificar usuarios." },
+    { texto: "☑️ Emisión de reportes en formato PDF y XLSX." },
+  ];
 
   return (
     <div id="projects">
@@ -120,322 +185,49 @@ export default function Projects() {
           color="text.primary"
           gutterBottom
         >
-          Proyectos
+          {titulo}
         </Typography>
 
-        <Accordion
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1bh-content"
-            id="panel1bh-header"
-          >
-            <Typography sx={{ width: "33%", flexShrink: 0 }}>
-              Crud-app
-            </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              Plantilla responsiva en base a las funciones de un CRUD.
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="Ant Design" color="info" variant="outlined" />
-            <Chip label="NodeJS" color="success" variant="outlined" />
-            <Chip label="MySQL" color="warning" variant="outlined" />
+        <CustomAccordion
+          titulo="Crud-app"
+          descripcion="Plantilla responsiva en base a las funciones de un CRUD."
+          lenguajes={lenguajesCrudApp}
+          detalles={detallesCrudApp}
+          imagenes={crudAppImagenes}
+          botones={botonesCrudApp}
+        />
 
-            <br />
-            <br />
+        <CustomAccordion
+          titulo="Rick-And-Morty-app"
+          descripcion="Consumiento api de Rick And Morty."
+          lenguajes={lenguajesRickAndMortyApp}
+          imagenes={RickAndMortyAppImagenes}
+          botones={botonesRickAndMortyApp}
+        />
 
-            <Typography variant="body1" gutterBottom>
-              ☑️ Ventana de iniciar sesión.
-            </Typography>
+        <CustomAccordion
+          titulo="Artist-portfolio"
+          descripcion="Portafolio para artistas."
+          lenguajes={lenguajesArtistPorfolio}
+          imagenes={portfolioArtistImagenes}
+          botones={botonesArtistPortfolio}
+        />
 
-            <Typography variant="body1" gutterBottom>
-              ☑️ Roles de usuario.
-            </Typography>
+        <CustomAccordion
+          titulo="Testi-app"
+          descripcion="Testimonio de clientes."
+          lenguajes={lenguajesTestiApp}
+          imagenes={testiappImagenes}
+          botones={botonesTestiApp}
+        />
 
-            <Typography variant="body1" gutterBottom>
-              ☑️ Menú lateral.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Resúmenes estadísticos de usuarios.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Añadir y modificar usuarios.
-            </Typography>
-
-            <Typography variant="body1" gutterBottom>
-              ☑️ Emisión de reportes en formato PDF y XLSX.
-            </Typography>
-
-            <br />
-
-            <ImageList sx={{ height: 512 }} cols={1}>
-              {crudAppImagenes.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}`}
-                    srcSet={`${item.img}`}
-                    alt={"crudapp"}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-              <ButtonGroup
-                color="primary"
-                aria-label="medium secondary button group"
-              >
-                {buttons}
-              </ButtonGroup>
-            </Stack>
-          </AccordionDetails>
-        </Accordion>
-
-        <Accordion
-          expanded={expanded === "panel2"}
-          onChange={handleChange("panel2")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel3bh-content"
-            id="panel3bh-header"
-          >
-            <Typography sx={{ width: "33%", flexShrink: 0 }}>
-              Rick-And-Morty-app
-            </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              Consumiento api de Rick And Morty.
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="Ant Design" color="info" variant="outlined" />
-
-            <br />
-            <br />
-
-            <ImageList sx={{ height: 512 }} cols={1}>
-              {RickAndMortyAppImagenes.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}`}
-                    srcSet={`${item.img}`}
-                    alt={"RickAndMortyApp"}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-              <ButtonGroup
-                color="primary"
-                aria-label="medium secondary button group"
-              >
-                <Button
-                  href="https://github.com/Ivoryredgrave/RickAndMortyApp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon />
-                  &nbsp;Código fuente
-                </Button>
-                <Button
-                  href="https://ivoryredgrave.github.io/RickAndMortyApp/"
-                  target="_blank"
-                  color="success"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon />
-                  &nbsp;Demo
-                </Button>
-              </ButtonGroup>
-            </Stack>
-          </AccordionDetails>
-        </Accordion>
-
-        <Accordion
-          expanded={expanded === "panel3"}
-          onChange={handleChange("panel3")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel4bh-content"
-            id="panel4bh-header"
-          >
-            <Typography sx={{ width: "33%", flexShrink: 0 }}>
-              Artist-portfolio
-            </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              Portafolio para artistas.
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="MUI" color="info" variant="outlined" />
-            <Chip label="CSS" color="secondary" variant="outlined" />
-
-            <br />
-            <br />
-
-            <ImageList sx={{ height: 512 }} cols={1}>
-              {portfolioArtistImagenes.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}`}
-                    srcSet={`${item.img}`}
-                    alt={"testiapp"}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-
-            <ButtonGroup
-              color="primary"
-              aria-label="medium secondary button group"
-            >
-              <Button
-                href="https://github.com/Ivoryredgrave/artist-portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon />
-                &nbsp;Código fuente
-              </Button>
-              <Button
-                href="https://ivoryredgrave.github.io/artist-portfolio/"
-                target="_blank"
-                color="success"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon />
-                &nbsp;Demo
-              </Button>
-            </ButtonGroup>
-          </AccordionDetails>
-        </Accordion>
-
-        <Accordion
-          expanded={expanded === "panel4"}
-          onChange={handleChange("panel4")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel4bh-content"
-            id="panel4bh-header"
-          >
-            <Typography sx={{ width: "33%", flexShrink: 0 }}>
-              Testi-app
-            </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              Testimonio de clientes.
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="MUI" color="info" variant="outlined" />
-            <Chip label="CSS" color="secondary" variant="outlined" />
-
-            <br />
-            <br />
-
-            <ImageList sx={{ height: 512 }} cols={1}>
-              {testiappImagenes.map((item) => (
-                <ImageListItem key={item.img}>
-                  <img
-                    src={`${item.img}`}
-                    srcSet={`${item.img}`}
-                    alt={"testiapp"}
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-            <ButtonGroup
-              color="primary"
-              aria-label="medium secondary button group"
-            >
-              <Button
-                href="https://github.com/Ivoryredgrave/testiAPP"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon />
-                &nbsp;Código fuente
-              </Button>
-              <Button
-                href="https://ivoryredgrave.github.io/testiAPP/"
-                target="_blank"
-                color="success"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon />
-                &nbsp;Demo
-              </Button>
-            </ButtonGroup>
-          </AccordionDetails>
-        </Accordion>
-
-        <Accordion
-          expanded={expanded === "panel5"}
-          onChange={handleChange("panel5")}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel5bh-content"
-            id="panel5bh-header"
-          >
-            <Typography sx={{ width: "33%", flexShrink: 0 }}>
-              Gallery-app
-            </Typography>
-            <Typography sx={{ color: "text.secondary" }}>
-              Crud de imágenes.
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Chip label="ReactJS" color="primary" variant="outlined" />
-            <Chip label="Ant Design" color="info" variant="outlined" />
-            <Chip label="NodeJS" color="success" variant="outlined" />
-            <Chip label="MySQL" color="warning" variant="outlined" />
-
-            <br />
-            <br />
-
-            <ImageList>
-              <ImageListItem>
-                <video
-                  src={galleryApp}
-                  poster={galleryappPreview}
-                  width="640"
-                  height="480"
-                  controls
-                  loop
-                />
-              </ImageListItem>
-            </ImageList>
-            <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-              <ButtonGroup
-                color="primary"
-                aria-label="medium secondary button group"
-              >
-                <Button
-                  href="https://github.com/Ivoryredgrave/galleryapp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LinkIcon />
-                  &nbsp;Código fuente
-                </Button>
-              </ButtonGroup>
-            </Stack>
-          </AccordionDetails>
-        </Accordion>
+        <CustomAccordion
+          titulo="Gallery-app"
+          descripcion="Crud de imágenes."
+          lenguajes={lenguajesGalleryApp}
+          video={galleryApp}
+          botones={botonesGalleryApp}
+        />
       </Container>
     </div>
   );

@@ -19,7 +19,7 @@ import javascriptlogo from "./multimedia/images/javascript-logo.png";
 import githublogo from "./multimedia/images/github-logo.png";
 import antdlogo from "./multimedia/images/ant-design-logo.png";
 
-function App() {
+export default function App() {
   const avatars = [
     { src: html5logo, alt: "HTML5 Logo" },
     { src: css3logo, alt: "CSS3 Logo" },
@@ -64,7 +64,7 @@ function App() {
 
         <Skills textoHabilidades="Habilidades" avatars={avatars} />
 
-        <Projects />
+        <Projects titulo="Proyectos" />
 
         <Footer
           titulo="Contacto"
@@ -83,5 +83,3 @@ function App() {
     </>
   );
 }
-
-export default App;
