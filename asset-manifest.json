@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.6f19c3d5.js",
+    "main.js": "/portfolio-app/static/js/main.73704afb.js",
     "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
-    "static/media/preview-galleryapp.png": "/portfolio-app/static/media/preview-galleryapp.7583dc4988d75d26bc79.png",
     "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
     "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
     "static/media/artist-portfolio.jpg": "/portfolio-app/static/media/artist-portfolio.c55681efebbc2df6892e.jpg",
@@ -31,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.6f19c3d5.js"
+    "static/js/main.73704afb.js"
   ]
 }
