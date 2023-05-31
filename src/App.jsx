@@ -48,7 +48,7 @@ export default function App() {
         <AboutMe
           descripcionPerfil="¡Hola! Me llamo"
           nombrePerfil="Carlos Javier López Morilla"
-          descripcionPerfil1="Soy desarrollador web junior en React, 
+          descripcionPerfil1="Soy frontend developer en React, 
                     amante del anime y apasionado por el game development."
           abrirCV="cv.pdf"
           descripcionBotonCV="Ver hoja de vida"
