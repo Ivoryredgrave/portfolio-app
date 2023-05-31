@@ -72,7 +72,7 @@ export default function App() {
                     entrada esta disponible."
           correo="ivoryredgrave@gmail.com"
           nombreBotonGmail="Gmail"
-          urlWhatsapp="https://api.whatsapp.com/send?text=¡Hola!&phone=+18493861171
+          urlWhatsapp="https://api.whatsapp.com/send?text=¡Hola!&phone=+18296911654
                     WhatsApp"
           nombreBotonWhatsapp="WhatsApp"
           textoFinalFooter="Desarrollado con ❤️ por Carlos Javier López"
