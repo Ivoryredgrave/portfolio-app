@@ -17,8 +17,8 @@ import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
 import testiahri from "../multimedia/images/testi-ahri.jpg";
 import testijinx from "../multimedia/images/testi-jinx.jpg";
 
-import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.png";
-import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.png";
+import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.jpg";
+import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.jpg";
 
 import artistPort from "../multimedia/images/artist-portfolio.jpg";
 import artistPort2 from "../multimedia/images/artist-portfolio2.jpg";
@@ -190,7 +190,7 @@ export default function Projects(props) {
 
         <CustomAccordion
           titulo="Crud-app"
-          descripcion="Plantilla responsiva en base a las funciones de un CRUD."
+          descripcion="Aplicación para la gestión de datos."
           lenguajes={lenguajesCrudApp}
           detalles={detallesCrudApp}
           imagenes={crudAppImagenes}

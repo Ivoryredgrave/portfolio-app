@@ -75,7 +75,7 @@ export default function App() {
           urlWhatsapp="https://api.whatsapp.com/send?text=¡Hola!&phone=+18296911654
                     WhatsApp"
           nombreBotonWhatsapp="WhatsApp"
-          textoFinalFooter="Desarrollado con ❤️ por Carlos Javier López"
+          textoFinalFooter="Desarrollado con ❤️ por Carlos Javier López Morilla"
           urlGithub="https://github.com/Ivoryredgrave"
           urlLinkedin="https://www.linkedin.com/in/carlos-javier-l%C3%B3pez/"
         />
