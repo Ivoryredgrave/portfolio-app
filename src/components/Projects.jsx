@@ -13,6 +13,7 @@ import crudapp7 from "../multimedia/images/crudapp7.jpg";
 import crudapp8 from "../multimedia/images/crudapp8.jpg";
 
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
+import crudappVideo from "../multimedia/videos/crudappVideo.mp4";
 
 import testiahri from "../multimedia/images/testi-ahri.jpg";
 import testijinx from "../multimedia/images/testi-jinx.jpg";
@@ -192,6 +193,8 @@ export default function Projects(props) {
           titulo="Crud-app"
           descripcion="Aplicación para la gestión de datos."
           lenguajes={lenguajesCrudApp}
+          video={crudappVideo}
+          posterVideo={crudapp}
           detalles={detallesCrudApp}
           imagenes={crudAppImagenes}
           botones={botonesCrudApp}

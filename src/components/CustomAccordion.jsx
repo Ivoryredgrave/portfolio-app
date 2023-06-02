@@ -7,7 +7,6 @@ import {
   Chip,
   ImageList,
   ImageListItem,
-  Stack,
   ButtonGroup,
   Button,
 } from "@mui/material";
@@ -15,8 +14,16 @@ import LinkIcon from "@mui/icons-material/Link";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function CustomAccordion(props) {
-  const { titulo, descripcion, lenguajes, detalles, imagenes, video, botones } =
-    props;
+  const {
+    titulo,
+    descripcion,
+    lenguajes,
+    detalles,
+    imagenes,
+    video,
+    posterVideo,
+    botones,
+  } = props;
 
   return (
     <Accordion>
@@ -44,8 +51,6 @@ export default function CustomAccordion(props) {
             <Typography key={index}>{detalle.texto}</Typography>
           ))}
 
-        <br />
-
         {imagenes && (
           <ImageList sx={{ height: 512 }} cols={1}>
             {imagenes.map((imagen, index) => (
@@ -64,31 +69,37 @@ export default function CustomAccordion(props) {
         {video && (
           <ImageList>
             <ImageListItem>
-              <video src={video} width="640" height="480" controls loop />
+              <video
+                src={video}
+                width="640"
+                height="480"
+                poster={posterVideo}
+                controls
+                loop
+                preload="auto"
+              />
             </ImageListItem>
           </ImageList>
         )}
 
         {botones && (
-          <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
-            <ButtonGroup
-              color="primary"
-              aria-label="medium secondary button group"
-            >
-              {botones.map((boton, index) => (
-                <Button
-                  key={index}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color={boton.color}
-                  href={boton.href}
-                >
-                  <LinkIcon />
-                  &nbsp;{boton.nombre}
-                </Button>
-              ))}
-            </ButtonGroup>
-          </Stack>
+          <ButtonGroup
+            color="primary"
+            aria-label="medium secondary button group"
+          >
+            {botones.map((boton, index) => (
+              <Button
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+                color={boton.color}
+                href={boton.href}
+              >
+                <LinkIcon />
+                &nbsp;{boton.nombre}
+              </Button>
+            ))}
+          </ButtonGroup>
         )}
       </AccordionDetails>
     </Accordion>
