@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.3dfbd796.js",
+    "main.js": "/portfolio-app/static/js/main.845114ba.js",
     "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
     "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
     "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
     "static/media/artist-portfolio.jpg": "/portfolio-app/static/media/artist-portfolio.c55681efebbc2df6892e.jpg",
-    "static/media/RickAndMortyApp2.png": "/portfolio-app/static/media/RickAndMortyApp2.8f4a22a760ef68fd1ac9.png",
     "static/media/crudapp8.jpg": "/portfolio-app/static/media/crudapp8.480bcf28e4aa8ba58195.jpg",
     "static/media/crudapp4.jpg": "/portfolio-app/static/media/crudapp4.13dca9cb9cdfb9919664.jpg",
     "static/media/crudapp7.jpg": "/portfolio-app/static/media/crudapp7.a924771bdc881cbb475d.jpg",
@@ -14,8 +13,9 @@
     "static/media/crudapp5.jpg": "/portfolio-app/static/media/crudapp5.22c06d0fd71d485b4f77.jpg",
     "static/media/artist-portfolio2.jpg": "/portfolio-app/static/media/artist-portfolio2.e378fa3e3f8d4101b359.jpg",
     "static/media/crudapp3.jpg": "/portfolio-app/static/media/crudapp3.e1e1d3cbd9a782dd4023.jpg",
-    "static/media/RickAndMortyApp.png": "/portfolio-app/static/media/RickAndMortyApp.9211e047530c9df24a03.png",
+    "static/media/RickAndMortyApp2.jpg": "/portfolio-app/static/media/RickAndMortyApp2.79ac33d75ed861fd8d7e.jpg",
     "static/media/crudapp.jpg": "/portfolio-app/static/media/crudapp.209d7bca0b92248c9867.jpg",
+    "static/media/RickAndMortyApp.jpg": "/portfolio-app/static/media/RickAndMortyApp.c09176df8ffa61a53428.jpg",
     "static/media/crudapp2.jpg": "/portfolio-app/static/media/crudapp2.203c60a6d45345c37a72.jpg",
     "static/media/ant-design-logo.png": "/portfolio-app/static/media/ant-design-logo.aa41c0fb5162888575ee.png",
     "static/media/cv.pdf": "/portfolio-app/static/media/cv.ae792f64bbed6721629f.pdf",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.3dfbd796.js"
+    "static/js/main.845114ba.js"
   ]
 }
