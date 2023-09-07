@@ -12,7 +12,6 @@ import Button from "@mui/material/Button";
 const ResponsiveAppBar = (props) => {
   const {
     tituloSobreMi,
-    tituloEducacion,
     tituloHabilidades,
     tituloProyectos,
     tituloContacto,
@@ -66,15 +65,15 @@ const ResponsiveAppBar = (props) => {
               <Button onClick={handleCloseNavMenu} href="#aboutme">
                 {tituloSobreMi}
               </Button>
-              <Button onClick={handleCloseNavMenu} href="#education">
-                {tituloEducacion}
-              </Button>
+
               <Button onClick={handleCloseNavMenu} href="#skills">
                 {tituloHabilidades}
               </Button>
+
               <Button onClick={handleCloseNavMenu} href="#projects">
                 {tituloProyectos}
               </Button>
+
               <Button onClick={handleCloseNavMenu} href="#contacts">
                 {tituloContacto}
               </Button>
@@ -95,7 +94,6 @@ const ResponsiveAppBar = (props) => {
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
             <Button href="#aboutme">{tituloSobreMi}</Button>
-            <Button href="#education">{tituloEducacion}</Button>
             <Button href="#skills">{tituloHabilidades}</Button>
             <Button href="#projects"> {tituloProyectos}</Button>
             <Button href="#contacts">{tituloContacto}</Button>

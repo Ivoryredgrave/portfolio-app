@@ -3,15 +3,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CustomAccordion from "./CustomAccordion";
 
-import crudapp from "../multimedia/images/crudapp.jpg";
-import crudapp2 from "../multimedia/images/crudapp2.jpg";
-import crudapp3 from "../multimedia/images/crudapp3.jpg";
-import crudapp4 from "../multimedia/images/crudapp4.jpg";
-import crudapp5 from "../multimedia/images/crudapp5.jpg";
-import crudapp6 from "../multimedia/images/crudapp6.jpg";
-import crudapp7 from "../multimedia/images/crudapp7.jpg";
-import crudapp8 from "../multimedia/images/crudapp8.jpg";
-
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
 import crudappVideo from "../multimedia/videos/crudappVideo.mp4";
 
@@ -25,35 +16,7 @@ import artistPort from "../multimedia/images/artist-portfolio.jpg";
 import artistPort2 from "../multimedia/images/artist-portfolio2.jpg";
 
 export default function Projects(props) {
-
   const { titulo } = props;
-
-  const crudAppImagenes = [
-    {
-      img: crudapp,
-    },
-    {
-      img: crudapp2,
-    },
-    {
-      img: crudapp3,
-    },
-    {
-      img: crudapp4,
-    },
-    {
-      img: crudapp5,
-    },
-    {
-      img: crudapp6,
-    },
-    {
-      img: crudapp7,
-    },
-    {
-      img: crudapp8,
-    },
-  ];
 
   const RickAndMortyAppImagenes = [
     {
@@ -193,10 +156,9 @@ export default function Projects(props) {
           titulo="Crud-app"
           descripcion="Aplicación para la gestión de datos."
           lenguajes={lenguajesCrudApp}
-          video={crudappVideo}
-          posterVideo={crudapp}
           detalles={detallesCrudApp}
-          imagenes={crudAppImagenes}
+          tituloVideo="Vista previa en vídeo"
+          video={crudappVideo}
           botones={botonesCrudApp}
         />
 
@@ -228,6 +190,7 @@ export default function Projects(props) {
           titulo="Gallery-app"
           descripcion="Crud de imágenes."
           lenguajes={lenguajesGalleryApp}
+          tituloVideo="Vista previa en vídeo"
           video={galleryApp}
           botones={botonesGalleryApp}
         />

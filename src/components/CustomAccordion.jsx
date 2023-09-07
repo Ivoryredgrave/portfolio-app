@@ -21,12 +21,13 @@ export default function CustomAccordion(props) {
     detalles,
     imagenes,
     video,
+    tituloVideo,
     posterVideo,
     botones,
   } = props;
 
   return (
-    <Accordion>
+    <Accordion expanded>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography sx={{ width: "33%", flexShrink: 0 }}>{titulo}</Typography>
         <Typography sx={{ color: "text.secondary" }}>{descripcion}</Typography>
@@ -67,19 +68,23 @@ export default function CustomAccordion(props) {
         )}
 
         {video && (
-          <ImageList>
-            <ImageListItem>
-              <video
-                src={video}
-                width="640"
-                height="480"
-                poster={posterVideo}
-                controls
-                loop
-                preload="auto"
-              />
-            </ImageListItem>
-          </ImageList>
+          <>
+            <ImageList>
+              <ImageListItem>
+                <video
+                  src={video}
+                  width="640"
+                  poster={posterVideo}
+                  controls
+                  loop
+                  preload="auto"
+                />
+                <Typography sx={{ color: "text.secondary" }}>
+                  {tituloVideo}
+                </Typography>
+              </ImageListItem>
+            </ImageList>
+          </>
         )}
 
         {botones && (

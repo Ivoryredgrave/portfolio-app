@@ -1,6 +1,5 @@
 import ResponsiveAppBar from "./components/AppBar";
 import AboutMe from "./components/AboutMe";
-import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
@@ -37,29 +36,20 @@ export default function App() {
         <CssBaseline />
 
         <ResponsiveAppBar
-          tituloNombre="Carlos Javier López"
+          tituloNombre="Portafolio"
           tituloSobreMi="Sobre mi"
-          tituloEducacion="Educación"
-          tituloHabilidades="Habilidades"
           tituloProyectos="Proyectos"
+          tituloHabilidades="Habilidades"
+          tituloEducacion="Formación"
           tituloContacto="Contacto"
         />
 
         <AboutMe
           descripcionPerfil="¡Hola! Me llamo"
-          nombrePerfil="Carlos Javier López Morilla"
-          descripcionPerfil1="Soy frontend developer en React, 
-                    amante del anime y apasionado por el game development."
+          nombrePerfil="Carlos Javier López"
+          descripcionPerfil1="Soy desarrollador web especializado en ambos lados, frontend y backend."
           abrirCV="cv.pdf"
           descripcionBotonCV="Ver hoja de vida"
-        />
-
-        <Education
-          titulo="Educación"
-          nombreSecundaria="Politécnico Don Pepe Álvarez"
-          subtituloSecundaria="Bachiller | 2013 - 2016"
-          nombreUniversidad="Universidad Nacional Pedro Henríquez Ureña"
-          subtituloUniversidad="Lic. en Informática | Sept. 2016 - Abr. 2022"
         />
 
         <Skills textoHabilidades="Habilidades" avatars={avatars} />
@@ -75,9 +65,9 @@ export default function App() {
           urlWhatsapp="https://api.whatsapp.com/send?text=¡Hola!&phone=+18296911654
                     WhatsApp"
           nombreBotonWhatsapp="WhatsApp"
-          textoFinalFooter="Desarrollado con ❤️ por Carlos Javier López Morilla"
+          textoFinalFooter="Desarrollado con ❤️ por Carlos Javier López"
           urlGithub="https://github.com/Ivoryredgrave"
-          urlLinkedin="https://www.linkedin.com/in/carlos-javier-l%C3%B3pez/"
+          urlLinkedin="https://www.linkedin.com/in/carlos-lopez-morilla/"
         />
       </ThemeProvider>
     </>
