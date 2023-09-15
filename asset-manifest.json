@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.1ab04d23.js",
+    "main.js": "/portfolio-app/static/js/main.66d40141.js",
     "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
     "static/media/crudappVideo.mp4": "/portfolio-app/static/media/crudappVideo.52aca1b04ea485422ef7.mp4",
     "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
     "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
-    "static/media/cv.pdf": "/portfolio-app/static/media/cv.f7307faa7eb05ccb3ebd.pdf",
     "static/media/artist-portfolio.jpg": "/portfolio-app/static/media/artist-portfolio.c55681efebbc2df6892e.jpg",
     "static/media/artist-portfolio2.jpg": "/portfolio-app/static/media/artist-portfolio2.e378fa3e3f8d4101b359.jpg",
     "static/media/RickAndMortyApp2.jpg": "/portfolio-app/static/media/RickAndMortyApp2.79ac33d75ed861fd8d7e.jpg",
     "static/media/RickAndMortyApp.jpg": "/portfolio-app/static/media/RickAndMortyApp.c09176df8ffa61a53428.jpg",
     "static/media/ant-design-logo.png": "/portfolio-app/static/media/ant-design-logo.aa41c0fb5162888575ee.png",
+    "static/media/cv.pdf": "/portfolio-app/static/media/cv.f52df07b17b3bb2129ea.pdf",
     "static/media/nodejs-logo.png": "/portfolio-app/static/media/nodejs-logo.9800c5fbafba08db82da.png",
     "static/media/react-logo.png": "/portfolio-app/static/media/react-logo.3123d4b8be14c35d5d90.png",
     "static/media/github-logo.png": "/portfolio-app/static/media/github-logo.76826d2ee983bb194e19.png",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.1ab04d23.js"
+    "static/js/main.66d40141.js"
   ]
 }
