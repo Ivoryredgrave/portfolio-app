@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/portfolio-app/static/css/main.f249b1be.css",
-    "main.js": "/portfolio-app/static/js/main.66d40141.js",
+    "main.js": "/portfolio-app/static/js/main.fb5e9351.js",
     "static/media/videoGalleryApp.mp4": "/portfolio-app/static/media/videoGalleryApp.ebf0b12691bc560f410b.mp4",
     "static/media/crudappVideo.mp4": "/portfolio-app/static/media/crudappVideo.52aca1b04ea485422ef7.mp4",
-    "static/media/testi-ahri.jpg": "/portfolio-app/static/media/testi-ahri.cd7a7e28f152ebc44f14.jpg",
-    "static/media/testi-jinx.jpg": "/portfolio-app/static/media/testi-jinx.87d1014a7af7393c9f97.jpg",
-    "static/media/artist-portfolio.jpg": "/portfolio-app/static/media/artist-portfolio.c55681efebbc2df6892e.jpg",
-    "static/media/artist-portfolio2.jpg": "/portfolio-app/static/media/artist-portfolio2.e378fa3e3f8d4101b359.jpg",
-    "static/media/RickAndMortyApp2.jpg": "/portfolio-app/static/media/RickAndMortyApp2.79ac33d75ed861fd8d7e.jpg",
-    "static/media/RickAndMortyApp.jpg": "/portfolio-app/static/media/RickAndMortyApp.c09176df8ffa61a53428.jpg",
-    "static/media/ant-design-logo.png": "/portfolio-app/static/media/ant-design-logo.aa41c0fb5162888575ee.png",
+    "static/media/testi-ahri.webp": "/portfolio-app/static/media/testi-ahri.905e16187276aaa7f7cf.webp",
+    "static/media/testi-jinx.webp": "/portfolio-app/static/media/testi-jinx.2da54e7f40ff5680ccbe.webp",
+    "static/media/artist-portfolio.webp": "/portfolio-app/static/media/artist-portfolio.78dcb3d9fb539fc6be62.webp",
+    "static/media/RickAndMortyApp2.webp": "/portfolio-app/static/media/RickAndMortyApp2.47d90f4e0f656b0ced72.webp",
+    "static/media/RickAndMortyApp.webp": "/portfolio-app/static/media/RickAndMortyApp.63c181198c19df4b2de5.webp",
     "static/media/cv.pdf": "/portfolio-app/static/media/cv.f52df07b17b3bb2129ea.pdf",
-    "static/media/nodejs-logo.png": "/portfolio-app/static/media/nodejs-logo.9800c5fbafba08db82da.png",
-    "static/media/react-logo.png": "/portfolio-app/static/media/react-logo.3123d4b8be14c35d5d90.png",
-    "static/media/github-logo.png": "/portfolio-app/static/media/github-logo.76826d2ee983bb194e19.png",
-    "static/media/mysql-logo.png": "/portfolio-app/static/media/mysql-logo.c0fd643fce30d4054c6a.png",
-    "static/media/javascript-logo.png": "/portfolio-app/static/media/javascript-logo.585333f7e1d37f56db51.png",
-    "static/media/css3-logo.png": "/portfolio-app/static/media/css3-logo.855149922962a193fc1b.png",
-    "static/media/html5-logo.png": "/portfolio-app/static/media/html5-logo.d9a3b8d48710328871d5.png",
+    "static/media/artist-portfolio2.webp": "/portfolio-app/static/media/artist-portfolio2.6ca69a72c9e4ed5c0ef8.webp",
+    "static/media/ant-design-logo.webp": "/portfolio-app/static/media/ant-design-logo.16bda3f49eb4ade6993f.webp",
+    "static/media/nodejs-logo.webp": "/portfolio-app/static/media/nodejs-logo.bb61b8c94e2868640915.webp",
+    "static/media/react-logo.webp": "/portfolio-app/static/media/react-logo.95da9134044977f47d5f.webp",
+    "static/media/github-logo.webp": "/portfolio-app/static/media/github-logo.130ddca9f79ab167390a.webp",
+    "static/media/css3-logo.webp": "/portfolio-app/static/media/css3-logo.bb162fa04a070677b0b4.webp",
+    "static/media/html5-logo.webp": "/portfolio-app/static/media/html5-logo.26d5c8d72160cd8fd599.webp",
+    "static/media/mysql-logo.webp": "/portfolio-app/static/media/mysql-logo.4fe71fcd144f1774e3ae.webp",
+    "static/media/javascript-logo.webp": "/portfolio-app/static/media/javascript-logo.6dfa7ea9c6569c69568a.webp",
     "index.html": "/portfolio-app/index.html"
   },
   "entrypoints": [
     "static/css/main.f249b1be.css",
-    "static/js/main.66d40141.js"
+    "static/js/main.fb5e9351.js"
   ]
 }
