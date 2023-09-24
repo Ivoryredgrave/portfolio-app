@@ -6,14 +6,14 @@ import CustomAccordion from "./CustomAccordion";
 import galleryApp from "../multimedia/videos/videoGalleryApp.mp4";
 import crudappVideo from "../multimedia/videos/crudappVideo.mp4";
 
-import testiahri from "../multimedia/images/testi-ahri.jpg";
-import testijinx from "../multimedia/images/testi-jinx.jpg";
+import testiahri from "../multimedia/images/testi-ahri.webp";
+import testijinx from "../multimedia/images/testi-jinx.webp";
 
-import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.jpg";
-import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.jpg";
+import RickAndMortyApp from "../multimedia/images/RickAndMortyApp.webp";
+import RickAndMortyApp2 from "../multimedia/images/RickAndMortyApp2.webp";
 
-import artistPort from "../multimedia/images/artist-portfolio.jpg";
-import artistPort2 from "../multimedia/images/artist-portfolio2.jpg";
+import artistPort from "../multimedia/images/artist-portfolio.webp";
+import artistPort2 from "../multimedia/images/artist-portfolio2.webp";
 
 export default function Projects(props) {
   const { titulo } = props;

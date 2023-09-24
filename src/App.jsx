@@ -9,14 +9,14 @@ import { darkTheme } from "./styles/components/muiStyles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./styles/styles.css";
 
-import html5logo from "./multimedia/images/html5-logo.png";
-import css3logo from "./multimedia/images/css3-logo.png";
-import mysqllogo from "./multimedia/images/mysql-logo.png";
-import nodejslogo from "./multimedia/images/nodejs-logo.png";
-import reactlogo from "./multimedia/images/react-logo.png";
-import javascriptlogo from "./multimedia/images/javascript-logo.png";
-import githublogo from "./multimedia/images/github-logo.png";
-import antdlogo from "./multimedia/images/ant-design-logo.png";
+import html5logo from "./multimedia/images/html5-logo.webp";
+import css3logo from "./multimedia/images/css3-logo.webp";
+import mysqllogo from "./multimedia/images/mysql-logo.webp";
+import nodejslogo from "./multimedia/images/nodejs-logo.webp";
+import reactlogo from "./multimedia/images/react-logo.webp";
+import javascriptlogo from "./multimedia/images/javascript-logo.webp";
+import githublogo from "./multimedia/images/github-logo.webp";
+import antdlogo from "./multimedia/images/ant-design-logo.webp";
 
 export default function App() {
   const avatars = [
