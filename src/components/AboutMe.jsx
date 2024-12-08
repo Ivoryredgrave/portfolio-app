@@ -33,7 +33,7 @@ const AboutMe = ({
 
           <Stack sx={{ pt: 1 }} direction="row" spacing={2}>
             <Button
-              href={`/${cvFile}`}
+              href={`${cvFile}`}
               target="_blank"
               rel="noopener noreferrer"
               variant="outlined"
