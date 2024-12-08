@@ -1,0 +1,6 @@
+.aboutme {
+  background: linear-gradient(45deg, #37505c 40%, #613d3d 90%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
