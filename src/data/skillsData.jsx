@@ -8,16 +8,18 @@ import githublogo from "/images/github-logo.webp";
 import antdlogo from "/images/ant-design-logo.webp";
 import postgresqllogo from "/images/postgresql-logo.webp";
 import materialuilogo from "/images/material-ui-logo.webp";
+import gitlogo from "/images/git-logo.webp";
 
-export const avatars = [
+export const techStack = [
     { src: html5logo, alt: "HTML", category: "frontend" },
     { src: css3logo, alt: "CSS", category: "frontend" },
     { src: javascriptlogo, alt: "JavaScript", category: "frontend" },
     { src: reactlogo, alt: "ReactJS", category: "frontend" },
     { src: antdlogo, alt: "Ant design", category: "frontend" },
-    { src: mysqllogo, alt: "MySQL", category: "backend" },
-    { src: nodejslogo, alt: "NodeJS", category: "backend" },
-    { src: githublogo, alt: "GitHub", category: "backend" },
-    { src: postgresqllogo, alt: "PostgreSQL", category: "backend" },
     { src: materialuilogo, alt: "Material ui", category: "frontend" },
+    { src: nodejslogo, alt: "NodeJS", category: "backend" },
+    { src: mysqllogo, alt: "MySQL", category: "backend" },
+    { src: postgresqllogo, alt: "PostgreSQL", category: "backend" },
+    { src: githublogo, alt: "GitHub", category: "backend" },
+    { src: gitlogo, alt: "Git", category: "backend" },
   ];

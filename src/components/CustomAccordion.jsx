@@ -93,8 +93,8 @@ CustomAccordion.propTypes = {
   languages: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
-      variant: PropTypes.string.isRequired,
+      color: PropTypes.string,
+      variant: PropTypes.string,
     })
   ).isRequired,
   images: PropTypes.arrayOf(

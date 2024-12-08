@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 
-export default function Skills({ skillsText, avatars }) {
+export default function Skills({ skillsText, techStack }) {
 
   return (
     <div id="skills">
@@ -20,33 +20,29 @@ export default function Skills({ skillsText, avatars }) {
         </Typography>
       </Box>
 
-      <Grid  container spacing={4} justifyContent="center">
-        {avatars
-          .filter((avatar) => avatar.category === "frontend")
-          .map((avatar, index) => (
-            <Grid key={index} xs={4} sm={3} md={2} display="flex" justifyContent="center">
-              <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <img src={avatar.src} alt={avatar.alt} style={{ width: "74px", height: "74px" }} />
-                <Typography variant="body2" color="text.secondary" align="center">
-                  {avatar.alt}
-                </Typography>
-              </Box>
-            </Grid>
+      <Grid sx={{ marginTop: "40px" }} container spacing={2} justifyContent="center">
+        {techStack
+          .filter((tech) => tech.category === "frontend")
+          .map((tech) => (
+            <Box key={tech.alt} sx={{ display: "flex", flexDirection: "column" }}>
+              <img src={tech.src} alt={tech.alt} style={{ width: "74px", height: "74px" }} />
+              <Typography variant="body2" color="text.secondary" align="center">
+                {tech.alt}
+              </Typography>
+            </Box>
           ))}
       </Grid>
 
-      <Grid sx={{ marginTop: "40px" }} container spacing={4} justifyContent="center">
-        {avatars
-          .filter((avatar) => avatar.category === "backend")
-          .map((avatar, index) => (
-            <Grid key={index} xs={4} sm={3} md={2} display="flex" justifyContent="center">
-              <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <img src={avatar.src} alt={avatar.alt} style={{ width: "74px", height: "74px" }} />
-                <Typography variant="body2" color="text.secondary" align="center">
-                  {avatar.alt}
-                </Typography>
-              </Box>
-            </Grid>
+      <Grid sx={{ marginTop: "40px" }} container spacing={2} justifyContent="center">
+        {techStack
+          .filter((tech) => tech.category === "backend")
+          .map((tech) => (
+            <Box key={tech.alt} sx={{ display: "flex", flexDirection: "column" }}>
+              <img src={tech.src} alt={tech.alt} style={{ width: "74px", height: "74px" }} />
+              <Typography variant="body2" color="text.secondary" align="center">
+                {tech.alt}
+              </Typography>
+            </Box>
           ))}
       </Grid>
 
@@ -56,7 +52,7 @@ export default function Skills({ skillsText, avatars }) {
 
 Skills.propTypes = {
   skillsText: PropTypes.string.isRequired,
-  avatars: PropTypes.arrayOf(
+  techStack: PropTypes.arrayOf(
     PropTypes.shape({
       alt: PropTypes.string.isRequired,
       src: PropTypes.string.isRequired,

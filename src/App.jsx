@@ -3,7 +3,7 @@ import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import { avatars } from "./data/skillsData";
+import { techStack } from "./data/skillsData";
 
 import { ThemeProvider } from "@mui/material/styles";
 import { darkTheme } from "./styles/components/muiStyles";
@@ -35,7 +35,7 @@ export default function App() {
           cvButtonText="View Resume"
         />
 
-        <Skills skillsText="Skills" avatars={avatars} />
+        <Skills skillsText="Skills" techStack={techStack} />
 
         <Projects title="Projects" />
 
