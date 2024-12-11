@@ -12,7 +12,6 @@ import {
   Button,
   Dialog,
   DialogContent,
-  IconButton,
 } from "@mui/material";
 import LinkIcon from "@mui/icons-material/Link";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -126,25 +125,54 @@ export default function CustomAccordion({
 
       </AccordionDetails>
 
-      <Dialog open={openModal} onClose={handleCloseModal} maxWidth="md" fullWidth>
-        <DialogContent sx={{ position: "relative", textAlign: "center", p: 0 }}>
-          <IconButton
+      <Dialog
+        open={openModal}
+        onClose={handleCloseModal}
+        sx={{
+          "& .MuiDialog-paper": {
+            width: "100%",
+            height: "100vh",
+            maxWidth: "none",
+            margin: 0,
+            overflow: "hidden",
+          },
+        }}
+      >
+        <DialogContent
+          sx={{
+            position: "relative",
+            p: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "auto",
+            backgroundColor: "#000",
+          }}
+        >
+
+          <Button
             onClick={handleCloseModal}
+            size="small"
             sx={{
-              position: "absolute",
-              top: 10,
-              right: 10,
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
-              color: "#fff",
-              "&:hover": { backgroundColor: "rgba(0, 0, 0, 0.8)" },
+              position: "fixed",
+              top: 40,
+              right: 40,
+              zIndex: 10,
             }}
+            variant="contained"
+            startIcon={<CloseIcon />}
           >
-            <CloseIcon />
-          </IconButton>
+            Close
+          </Button>
+
           <img
             src={selectedImage}
             alt="Selected"
-            style={{ width: "100%", height: "auto" }}
+            style={{
+              display: "block",
+              width: "100%",
+              height: "auto",
+              margin: "20px auto 0",
+            }}
           />
         </DialogContent>
       </Dialog>
