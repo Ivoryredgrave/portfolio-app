@@ -11,6 +11,9 @@ import {
   buttonsArtistPortfolio,
   languagesRickAndMortyApp,
   languagesArtistPortfolio,
+  buttonsPokeCard,
+  pokeCardImages,
+  languagesPokeCard,
 } from "../data/projectsData";
 
 export default function Projects({ title }) {
@@ -50,6 +53,15 @@ export default function Projects({ title }) {
           images={artistPortfolioImages}
           buttons={buttonsArtistPortfolio}
         />
+
+        <CustomAccordion
+          title="Pokecard"
+          description="A reusable card to display information."
+          languages={languagesPokeCard}
+          images={pokeCardImages}
+          buttons={buttonsPokeCard}
+        />
+
       </Box>
     </div>
   );
