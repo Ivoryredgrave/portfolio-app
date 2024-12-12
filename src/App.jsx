@@ -20,10 +20,10 @@ export default function App() {
         <AppBar
           title="Portfolio"
           menuItems={[
-            { title: "About Me", href: "#aboutme" },
-            { title: "Skills", href: "#skills" },
-            { title: "Projects", href: "#projects" },
-            { title: "Contact", href: "#contact" },
+            { title: "About Me", href: "aboutme" },
+            { title: "Skills", href: "skills" },
+            { title: "Projects", href: "projects" },
+            { title: "Contact", href: "contact" },
           ]}
         />
 

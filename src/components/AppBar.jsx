@@ -9,10 +9,11 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import { Link as ScrollLink } from "react-scroll";
 
 const MenuLinks = ({ menuItems, onCloseNavMenu }) => {
   return menuItems.map((item, index) => (
-    <Button key={index} onClick={onCloseNavMenu} href={item.href}>
+    <Button key={index} onClick={onCloseNavMenu} href={`#${item.href}`}>
       {item.title}
     </Button>
   ));
@@ -22,9 +23,15 @@ const DesktopMenu = ({ menuItems }) => {
   return (
     <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent: "center" }}>
       {menuItems.map((item, index) => (
-        <Button key={index} href={item.href}>
-          {item.title}
-        </Button>
+        <ScrollLink
+          key={index}
+          to={item.href}
+          smooth={true}
+          duration={500}
+          offset={-70}
+        >
+          <Button>{item.title}</Button>
+        </ScrollLink>
       ))}
     </Box>
   );
