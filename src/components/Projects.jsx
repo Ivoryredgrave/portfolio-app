@@ -5,15 +5,18 @@ import CustomAccordion from "./CustomAccordion";
 import { Box } from "@mui/material";
 
 import {
-  RickAndMortyAppImages,
+
+  artistPortfolioLanguages,
   artistPortfolioImages,
-  buttonsRickAndMortyApp,
-  buttonsArtistPortfolio,
-  languagesRickAndMortyApp,
-  languagesArtistPortfolio,
-  buttonsPokeCard,
-  pokeCardImages,
-  languagesPokeCard,
+  artistPortfolioButtons,
+
+  productCardLanguages,
+  productCardImages,
+  productCardButtons,
+
+  rickAndMortyLanguages,
+  rickAndMortyImages,
+  rickAndMortyButtons,
 } from "../data/projectsData";
 
 export default function Projects({ title }) {
@@ -41,25 +44,25 @@ export default function Projects({ title }) {
         <CustomAccordion
           title="Rick-and-morty-app"
           description="Consuming rick and morty api."
-          languages={languagesRickAndMortyApp}
-          images={RickAndMortyAppImages}
-          buttons={buttonsRickAndMortyApp}
+          languages={rickAndMortyLanguages}
+          images={rickAndMortyImages}
+          buttons={rickAndMortyButtons}
         />
 
         <CustomAccordion
           title="Artist-portfolio"
           description="Portfolio for artists."
-          languages={languagesArtistPortfolio}
+          languages={artistPortfolioLanguages}
           images={artistPortfolioImages}
-          buttons={buttonsArtistPortfolio}
+          buttons={artistPortfolioButtons}
         />
 
         <CustomAccordion
-          title="Pokecard"
+          title="Product-card"
           description="A reusable card to display information."
-          languages={languagesPokeCard}
-          images={pokeCardImages}
-          buttons={buttonsPokeCard}
+          languages={productCardLanguages}
+          images={productCardImages}
+          buttons={productCardButtons}
         />
 
       </Box>

@@ -1,48 +1,48 @@
 import RickAndMortyApp from "/images/rick-and-morty.webp";
 import artistPort from "/images/artist-portfolio.webp";
-import pokecard from "/images/pokecard.webp";
+import productCard from "/images/product-card.webp";
 
-// Project 1: Rick and Morty App
-export const RickAndMortyAppImages = [
+// Project 1: rick and morty app
+export const rickAndMortyImages = [
     { img: RickAndMortyApp }
 ];
 
-export const buttonsRickAndMortyApp = [
+export const rickAndMortyButtons = [
     { name: "Source Code", href: "https://github.com/Ivoryredgrave/RickAndMortyApp" },
     { name: "Demo", href: "https://ivoryredgrave.github.io/rickandmortyapp/", color: "success" }
 ];
 
-export const languagesRickAndMortyApp = [
+export const rickAndMortyLanguages = [
     { text: "ReactJS" },
     { text: "Ant design" }
 ];
 
-// Project 2: Artist Portfolio
+// Project 2: artist portfolio
 export const artistPortfolioImages = [
     { img: artistPort }
 ];
 
-export const buttonsArtistPortfolio = [
+export const artistPortfolioButtons = [
     { name: "Source Code", href: "https://github.com/Ivoryredgrave/artist-portfolio" },
     { name: "Demo", href: "https://ivoryredgrave.github.io/artist-portfolio/", color: "success" }
 ];
 
-export const languagesArtistPortfolio = [
+export const artistPortfolioLanguages = [
     { text: "ReactJS" },
     { text: "Material ui" }
 ];
 
-// Project 3: Pokecard
-export const pokeCardImages = [
-    { img: pokecard }
+// Project 3: product card
+export const productCardImages = [
+    { img: productCard }
 ];
 
-export const buttonsPokeCard = [
-    { name: "Source Code", href: "https://github.com/Ivoryredgrave/pokecard" },
-    { name: "Demo", href: "https://ivoryredgrave.github.io/pokecard/", color: "success" }
+export const productCardButtons = [
+    { name: "Source Code", href: "https://github.com/Ivoryredgrave/productcard" },
+    { name: "Demo", href: "https://ivoryredgrave.github.io/productcard/", color: "success" }
 ];
 
-export const languagesPokeCard = [
+export const productCardLanguages = [
     { text: "ReactJS" },
-    { text: "Material ui" }
+    { text: "Material UI" }
 ];
