@@ -2,7 +2,7 @@ import RickAndMortyApp from "/images/rick-and-morty.webp";
 import artistPort from "/images/artist-portfolio.webp";
 import productCard from "/images/product-card.webp";
 
-import crudappLogin from "/images/crudapp-login.webp";
+import crudappLogin from "/images/crudapp-login.png";
 import crudappMenu from "/images/crudapp-menu.webp";
 import crudappUsers from "/images/crudapp-users.webp";
 
@@ -33,7 +33,7 @@ export const artistPortfolioButtons = [
 
 export const artistPortfolioLanguages = [
     { text: "ReactJS" },
-    { text: "Material ui" }
+    { text: "Material UI" }
 ];
 
 // Project 3: product card
