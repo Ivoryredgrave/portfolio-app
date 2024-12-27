@@ -17,6 +17,9 @@ import {
   rickAndMortyLanguages,
   rickAndMortyImages,
   rickAndMortyButtons,
+  crudAppLanguages,
+  crudAppImages,
+  crudAppButtons,
 } from "../data/projectsData";
 
 export default function Projects({ title }) {
@@ -40,6 +43,14 @@ export default function Projects({ title }) {
         >
           {title}
         </Typography>
+
+        <CustomAccordion
+          title="Crud-app"
+          description="A CRUD application featuring user authentication and management."
+          languages={crudAppLanguages}
+          images={crudAppImages}
+          buttons={crudAppButtons}
+        />
 
         <CustomAccordion
           title="Rick-and-morty-app"

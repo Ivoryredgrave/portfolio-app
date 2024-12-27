@@ -2,6 +2,10 @@ import RickAndMortyApp from "/images/rick-and-morty.webp";
 import artistPort from "/images/artist-portfolio.webp";
 import productCard from "/images/product-card.webp";
 
+import crudappLogin from "/images/crudapp-login.webp";
+import crudappMenu from "/images/crudapp-menu.webp";
+import crudappUsers from "/images/crudapp-users.webp";
+
 // Project 1: rick and morty app
 export const rickAndMortyImages = [
     { img: RickAndMortyApp }
@@ -45,4 +49,30 @@ export const productCardButtons = [
 export const productCardLanguages = [
     { text: "ReactJS" },
     { text: "Material UI" }
+];
+
+// Project 4: crud app
+export const crudAppImages = [
+    {
+        img: crudappLogin,
+    },
+    {
+        img: crudappMenu
+    },
+    {
+        img: crudappUsers
+    }
+];
+
+export const crudAppButtons = [
+    { name: "Frontend", href: "https://github.com/Ivoryredgrave/crudapp-frontend" },
+    { name: "Backend", href: "https://github.com/Ivoryredgrave/crudapp-backend" },
+];
+
+export const crudAppLanguages = [
+    { text: "ReactJS" },
+    { text: "Material UI" },
+    { text: "NodeJS" },
+    { text: "Express" },
+    { text: "PostgreSQL" }
 ];
